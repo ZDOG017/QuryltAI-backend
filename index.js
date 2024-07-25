@@ -20,13 +20,13 @@ const openai = new OpenAI({
 
 // Initialize rate limiter
 const limiter = new Bottleneck({
-  minTime: 1000 // Minimum time between requests (in milliseconds)
+  minTime: 5000 // Minimum time between requests (5 seconds)
 });
 
 // Initialize cache
 const cache = new NodeCache({ stdTTL: 3600 }); // Cache for 1 hour
 
-const fetchWithRetry = async (url, headers, maxRetries = 3, baseDelay = 1000) => {
+const fetchWithRetry = async (url, headers, maxRetries = 5, baseDelay = 5000) => {
   for (let i = 0; i < maxRetries; i++) {
     try {
       const response = await axios.get(url, { headers });
@@ -159,7 +159,7 @@ app.post('/api/generate', async (req, res) => {
 
     const queue = new Bottleneck({
       maxConcurrent: 1,
-      minTime: 10000 // 10 seconds between requests
+      minTime: 5000 // 5 seconds between requests
     });
 
     const fetchedProducts = await queue.schedule(() =>

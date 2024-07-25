@@ -168,26 +168,20 @@ app.post('/api/generate', async (req, res) => {
       throw new Error('OpenAI response is missing one or more required components');
     }
 
-    const queue = new Bottleneck({
-      maxConcurrent: 1,
-      minTime: 5000 // 5 seconds between requests
-    });
-
-    const fetchedProducts = await queue.schedule(() =>
-      Promise.all(requiredComponents.map(async (key) => {
-        const component = components[key];
-        try {
-          console.log(`Fetching products for component: ${component}`);
-          const products = await fetchProduct(component);
-          const bestMatchProduct = findBestMatch(component, products);
-          console.log(`Best match product for ${component}:`, bestMatchProduct);
-          return { key, product: bestMatchProduct };
-        } catch (err) {
-          console.error('Error fetching product:', component, err);
-          return { key, product: null };
-        }
-      }))
-    );
+    const fetchedProducts = [];
+    for (const key of requiredComponents) {
+      const component = components[key];
+      try {
+        console.log(`Fetching products for component: ${component}`);
+        const products = await fetchProduct(component);
+        const bestMatchProduct = findBestMatch(component, products);
+        console.log(`Best match product for ${component}:`, bestMatchProduct);
+        fetchedProducts.push({ key, product: bestMatchProduct });
+      } catch (err) {
+        console.error('Error fetching product:', component, err);
+        fetchedProducts.push({ key, product: null });
+      }
+    }
 
     const availableProducts = fetchedProducts.filter(({ product }) => product !== null);
     console.log('Available products after filtering:', availableProducts.length);
@@ -238,31 +232,22 @@ app.post('/api/generate', async (req, res) => {
     try {
       const adjustedComponents = JSON.parse(adjustedResponseText);
 
-      const adjustedFetchedProducts = await queue.schedule(() =>
-        Promise.all(
-          Object.entries(adjustedComponents).map(async ([key, component]) => {
-            if (typeof component === 'string') {
-              try {
-                console.log(`Fetching products for adjusted component: ${component}`);
-                const products = await fetchProduct(component);
-                const bestMatchProduct = findBestMatch(component, products);
-                console.log(`Best match product for adjusted ${component}:`, bestMatchProduct);
-                return { key, product: bestMatchProduct };
-              } catch (err) {
-                console.error('Error fetching adjusted product:', component, err);
-                return { key, product: null };
-              }
+      for (const key in adjustedComponents) {
+        if (adjustedComponents.hasOwnProperty(key)) {
+          const component = adjustedComponents[key];
+          if (typeof component === 'string') {
+            try {
+              console.log(`Fetching products for adjusted component: ${component}`);
+              const products = await fetchProduct(component);
+              const bestMatchProduct = findBestMatch(component, products);
+              console.log(`Best match product for adjusted ${component}:`, bestMatchProduct);
+              productResponse[key] = bestMatchProduct;
+            } catch (err) {
+              console.error('Error fetching adjusted product:', component, err);
             }
-            return { key, product: null };
-          })
-        )
-      );
-
-      adjustedFetchedProducts.forEach(({ key, product }) => {
-        if (product) {
-          productResponse[key] = product;
+          }
         }
-      });
+      }
 
       res.send({ response: adjustedResponseText, products: productResponse });
       return;

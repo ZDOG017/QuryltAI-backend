@@ -37,16 +37,20 @@ const fetchProduct = async (searchTerm) => {
 
   try {
     const response = await axios.get(url, { headers });
-    const products = response.data.data.cards.map(card => ({
-      name: card.title,
-      price: card.unitPrice,
-      url: card.shopLink,
-      image: card.previewImages[0]?.large || '',
-      rating: card.rating,
-      reviewCount: card.reviewsQuantity,
-    }));
-
-    return products;
+    if (response.headers['content-type'].includes('application/json')) {
+      const products = response.data.data.cards.map(card => ({
+        name: card.title,
+        price: card.unitPrice,
+        url: card.shopLink,
+        image: card.previewImages[0]?.large || '',
+        rating: card.rating,
+        reviewCount: card.reviewsQuantity,
+      }));
+      return products;
+    } else {
+      console.error('Non-JSON response received:', response.data);
+      return [];
+    }
   } catch (error) {
     console.error('Error fetching the JSON data:', error);
     return [];

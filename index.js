@@ -10,8 +10,7 @@ dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors()); 
-
+app.use(cors());
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -103,7 +102,7 @@ app.post('/api/generate', async (req, res) => {
       model: modelId,
       messages: currentMessages,
     });
-    
+
     const responseText = result.choices[0].message.content;
     console.log('Received response from OpenAI: \n', responseText);
 
@@ -154,71 +153,78 @@ app.post('/api/generate', async (req, res) => {
     // Calculate total price
     const totalPrice = Object.values(productResponse).reduce((sum, product) => sum + product.price, 0);
 
-    // If there are missing components or the total price is not within 10% of the budget, ask OpenAI for adjustments
-    if (missingComponents.length > 0 || Math.abs(totalPrice - budget) / budget > 0.1) {
-      const componentsWithPrices = Object.entries(productResponse)
-        .map(([key, product]) => `${key}: ${product.name} - ${product.price} KZT`)
-        .join(', ');
-
-      const adjustmentPrompt = `The following components were not found or the total price (${totalPrice} KZT) is not within 10% of the budget (${budget} KZT):
-      ${missingComponents.join(', ')}. Current components and prices: ${componentsWithPrices}.
-      Please suggest alternatives for the missing components and adjust the build to be closer to the budget while maintaining performance. STRICTLY: Provide your response in the same JSON format as before. Ensure the total cost does not exceed the budget and remains within 10% of the budget.
-      And Also Please ensure that all components are real pc components because before parser could give me freezer or something random`;
-
-      const adjustmentMessages = [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: adjustmentPrompt }
-      ];
-
-      const adjustmentResult = await openai.chat.completions.create({
-        model: modelId,
-        messages: adjustmentMessages,
-      });
-
-      const adjustedResponseText = adjustmentResult.choices[0].message.content;
-      console.log('Received adjusted response from OpenAI: \n', adjustedResponseText);
-
-      try {
-        const adjustedComponents = JSON.parse(adjustedResponseText);
-
-        // Fetch products for adjusted components
-        const adjustedFetchedProducts = await Promise.all(
-          Object.entries(adjustedComponents).map(async ([key, component]) => {
-            if (typeof component === 'string') {
-              try {
-                console.log(`Fetching products for adjusted component: ${component}`);
-                const products = await fetchProduct(component);
-                const bestMatchProduct = findBestMatch(component, products);
-                console.log(`Best match product for adjusted ${component}:`, bestMatchProduct);
-                return { key, product: bestMatchProduct };
-              } catch (err) {
-                console.error('Error fetching adjusted product:', component, err);
-                return { key, product: null };
-              }
-            }
-            return { key, product: null };
-          })
-        );
-
-        // Merge adjusted products with original products
-        adjustedFetchedProducts.forEach(({ key, product }) => {
-          if (product) {
-            productResponse[key] = product;
-          }
-        });
-      } catch (error) {
-        console.error('Failed to parse adjusted JSON response from OpenAI:', error);
-      }
+    // Send the response and return immediately if everything is okay
+    if (missingComponents.length === 0 && Math.abs(totalPrice - budget) / budget <= 0.1) {
+      res.send({ response: responseText, products: productResponse });
+      return;
     }
 
-    // Send the response and return immediately
-    res.send({ response: responseText, products: productResponse });
-    return; // This ensures that the function stops executing after sending the response
+    // If there are missing components or the total price is not within 10% of the budget, ask OpenAI for adjustments
+    const componentsWithPrices = Object.entries(productResponse)
+      .map(([key, product]) => `${key}: ${product.name} - ${product.price} KZT`)
+      .join(', ');
+
+    const adjustmentPrompt = `The following components were not found or the total price (${totalPrice} KZT) is not within 10% of the budget (${budget} KZT):
+    ${missingComponents.join(', ')}. Current components and prices: ${componentsWithPrices}.
+    Please suggest alternatives for the missing components and adjust the build to be closer to the budget while maintaining performance. STRICTLY: Provide your response in the same JSON format as before. Ensure the total cost does not exceed the budget and remains within 10% of the budget.
+    And Also Please ensure that all components are real pc components because before parser could give me freezer or something random`;
+
+    const adjustmentMessages = [
+      { role: "system", content: systemPrompt },
+      { role: "user", content: adjustmentPrompt }
+    ];
+
+    const adjustmentResult = await openai.chat.completions.create({
+      model: modelId,
+      messages: adjustmentMessages,
+    });
+
+    const adjustedResponseText = adjustmentResult.choices[0].message.content;
+    console.log('Received adjusted response from OpenAI: \n', adjustedResponseText);
+
+    try {
+      const adjustedComponents = JSON.parse(adjustedResponseText);
+
+      // Fetch products for adjusted components
+      const adjustedFetchedProducts = await Promise.all(
+        Object.entries(adjustedComponents).map(async ([key, component]) => {
+          if (typeof component === 'string') {
+            try {
+              console.log(`Fetching products for adjusted component: ${component}`);
+              const products = await fetchProduct(component);
+              const bestMatchProduct = findBestMatch(component, products);
+              console.log(`Best match product for adjusted ${component}:`, bestMatchProduct);
+              return { key, product: bestMatchProduct };
+            } catch (err) {
+              console.error('Error fetching adjusted product:', component, err);
+              return { key, product: null };
+            }
+          }
+          return { key, product: null };
+        })
+      );
+
+      // Merge adjusted products with original products
+      adjustedFetchedProducts.forEach(({ key, product }) => {
+        if (product) {
+          productResponse[key] = product;
+        }
+      });
+
+      // Send the final response
+      res.send({ response: adjustedResponseText, products: productResponse });
+      return;
+
+    } catch (error) {
+      console.error('Failed to parse adjusted JSON response from OpenAI:', error);
+      res.status(500).json({ message: "Internal server error" });
+      return;
+    }
 
   } catch (err) {
     console.error('Error in generateResponse:', err);
     res.status(500).json({ message: "Internal server error" });
-    return; // Also return here to ensure the function stops in case of an error
+    return;
   }
 });
 

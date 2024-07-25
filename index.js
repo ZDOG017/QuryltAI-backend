@@ -31,7 +31,7 @@ axiosRetry(axios, {
   retries: 3,
   retryDelay: axiosRetry.exponentialDelay,
   retryCondition: (error) => {
-    return error.response.status === 429;
+    return error.response && error.response.status === 429;
   },
 });
 

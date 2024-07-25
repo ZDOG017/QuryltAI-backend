@@ -26,6 +26,16 @@ const limiter = new Bottleneck({
 // Initialize cache
 const cache = new NodeCache({ stdTTL: 3600 }); // Cache for 1 hour
 
+const userAgents = [
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0',
+  'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
+  // Add more user agents as needed
+];
+
+const randomDelay = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1) + min)));
+
 const fetchWithRetry = async (url, headers, maxRetries = 5, baseDelay = 5000) => {
   for (let i = 0; i < maxRetries; i++) {
     try {
@@ -54,7 +64,7 @@ const fetchProduct = limiter.wrap(async (searchTerm) => {
 
   const headers = {
     'Host': 'kaspi.kz',
-    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0',
+    'User-Agent': userAgents[Math.floor(Math.random() * userAgents.length)],
     'Accept': 'application/json, text/*',
     'Accept-Language': 'en-US,en;q=0.5',
     'Accept-Encoding': 'gzip, deflate, br, zstd',
@@ -68,6 +78,7 @@ const fetchProduct = limiter.wrap(async (searchTerm) => {
   };
 
   try {
+    await randomDelay(1000, 5000); // Random delay between 1 and 5 seconds
     const response = await fetchWithRetry(url, headers);
     if (response.headers['content-type'].includes('application/json')) {
       const products = response.data.data.cards.map(card => ({

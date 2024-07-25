@@ -1,12 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-const axiosRetry = require('axios-retry');
 const stringSimilarity = require('string-similarity');
 const dotenv = require('dotenv');
 const OpenAI = require('openai');
 const cors = require('cors');
-const rateLimit = require('express-rate-limit');
+const Bottleneck = require('bottleneck');
+const NodeCache = require('node-cache');
 
 dotenv.config();
 
@@ -18,24 +18,37 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Implementing rate limiting
-const apiLimiter = rateLimit({
-  windowMs: 60 * 1000, // 1 minute
-  max: 10, // limit each IP to 10 requests per windowMs
-  message: 'Too many requests from this IP, please try again after a minute'
+// Initialize rate limiter
+const limiter = new Bottleneck({
+  minTime: 1000 // Minimum time between requests (in milliseconds)
 });
 
-app.use('/api/', apiLimiter);
+// Initialize cache
+const cache = new NodeCache({ stdTTL: 3600 }); // Cache for 1 hour
 
-axiosRetry(axios, { 
-  retries: 3,
-  retryDelay: axiosRetry.exponentialDelay,
-  retryCondition: (error) => {
-    return error.response && error.response.status === 429;
-  },
-});
+const fetchWithRetry = async (url, headers, maxRetries = 3, baseDelay = 1000) => {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await axios.get(url, { headers });
+      return response;
+    } catch (error) {
+      if (error.response && error.response.status === 429) {
+        const delay = baseDelay * Math.pow(2, i);
+        console.log(`Rate limited. Retrying in ${delay}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      } else {
+        throw error;
+      }
+    }
+  }
+  throw new Error('Max retries reached');
+};
 
-const fetchProduct = async (searchTerm) => {
+const fetchProduct = limiter.wrap(async (searchTerm) => {
+  const cacheKey = `product:${searchTerm}`;
+  const cachedResult = cache.get(cacheKey);
+  if (cachedResult) return cachedResult;
+
   const query = encodeURIComponent(searchTerm);
   const url = `https://kaspi.kz/yml/product-view/pl/filters?text=${query}&hint_chips_click=false&page=0&all=false&fl=true&ui=d&q=%3AavailableInZones%3AMagnum_ZONE1&i=-1&c=750000000`;
 
@@ -55,7 +68,7 @@ const fetchProduct = async (searchTerm) => {
   };
 
   try {
-    const response = await axios.get(url, { headers });
+    const response = await fetchWithRetry(url, headers);
     if (response.headers['content-type'].includes('application/json')) {
       const products = response.data.data.cards.map(card => ({
         name: card.title,
@@ -65,6 +78,7 @@ const fetchProduct = async (searchTerm) => {
         rating: card.rating,
         reviewCount: card.reviewsQuantity,
       }));
+      cache.set(cacheKey, products);
       return products;
     } else {
       console.error('Non-JSON response received:', response.data);
@@ -74,7 +88,7 @@ const fetchProduct = async (searchTerm) => {
     console.error('Error fetching the JSON data:', error);
     return [];
   }
-};
+});
 
 const findBestMatch = (searchTerm, products) => {
   if (products.length === 0) return null;

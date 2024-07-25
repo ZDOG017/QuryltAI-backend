@@ -60,7 +60,7 @@ const fetchProduct = limiter.wrap(async (searchTerm) => {
   if (cachedResult) return cachedResult;
 
   const query = encodeURIComponent(searchTerm);
-  const url = `https://kaspi.kz/yml/product-view/pl/filters?text=${query}&hint_chips_click=false&page=0&all=false&fl=true&ui=d&q=%3AavailableInZones%3AMagnum_ZONE1&i=-1&c=750000000`;
+  const url = `https://kaspi.kz/shop/search/?text=${query}&q=%3AavailableInZones%3AMagnum_ZONE1&sort=relevance&filteredByCategory=false&sc=`;
 
   const headers = {
     'Host': 'kaspi.kz',

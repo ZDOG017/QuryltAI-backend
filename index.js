@@ -1,10 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
+const axiosRetry = require('axios-retry');
 const stringSimilarity = require('string-similarity');
 const dotenv = require('dotenv');
 const OpenAI = require('openai');
 const cors = require('cors');
+const rateLimit = require('express-rate-limit');
 
 dotenv.config();
 
@@ -14,6 +16,23 @@ app.use(cors());
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
+});
+
+// Implementing rate limiting
+const apiLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 10, // limit each IP to 10 requests per windowMs
+  message: 'Too many requests from this IP, please try again after a minute'
+});
+
+app.use('/api/', apiLimiter);
+
+axiosRetry(axios, { 
+  retries: 3,
+  retryDelay: axiosRetry.exponentialDelay,
+  retryCondition: (error) => {
+    return error.response.status === 429;
+  },
 });
 
 const fetchProduct = async (searchTerm) => {

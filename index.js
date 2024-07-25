@@ -113,9 +113,6 @@ const findBestMatch = (searchTerm, products) => {
 app.post('/api/generate', async (req, res) => {
   try {
     const { prompt, budget } = req.body;
-    if (!prompt) {
-      return res.status(400).json({ message: "Prompt is required" });
-    }
     console.log('Received prompt:', prompt);
     console.log('Budget:', budget);
 

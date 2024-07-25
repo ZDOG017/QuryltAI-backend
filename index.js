@@ -157,8 +157,13 @@ app.post('/api/generate', async (req, res) => {
       throw new Error('OpenAI response is missing one or more required components');
     }
 
-    const fetchedProducts = await Promise.all(
-      requiredComponents.map(async (key) => {
+    const queue = new Bottleneck({
+      maxConcurrent: 1,
+      minTime: 10000 // 10 seconds between requests
+    });
+
+    const fetchedProducts = await queue.schedule(() =>
+      Promise.all(requiredComponents.map(async (key) => {
         const component = components[key];
         try {
           console.log(`Fetching products for component: ${component}`);
@@ -170,7 +175,7 @@ app.post('/api/generate', async (req, res) => {
           console.error('Error fetching product:', component, err);
           return { key, product: null };
         }
-      })
+      }))
     );
 
     const availableProducts = fetchedProducts.filter(({ product }) => product !== null);
@@ -222,33 +227,32 @@ app.post('/api/generate', async (req, res) => {
     try {
       const adjustedComponents = JSON.parse(adjustedResponseText);
 
-      // Fetch products for adjusted components
-      const adjustedFetchedProducts = await Promise.all(
-        Object.entries(adjustedComponents).map(async ([key, component]) => {
-          if (typeof component === 'string') {
-            try {
-              console.log(`Fetching products for adjusted component: ${component}`);
-              const products = await fetchProduct(component);
-              const bestMatchProduct = findBestMatch(component, products);
-              console.log(`Best match product for adjusted ${component}:`, bestMatchProduct);
-              return { key, product: bestMatchProduct };
-            } catch (err) {
-              console.error('Error fetching adjusted product:', component, err);
-              return { key, product: null };
+      const adjustedFetchedProducts = await queue.schedule(() =>
+        Promise.all(
+          Object.entries(adjustedComponents).map(async ([key, component]) => {
+            if (typeof component === 'string') {
+              try {
+                console.log(`Fetching products for adjusted component: ${component}`);
+                const products = await fetchProduct(component);
+                const bestMatchProduct = findBestMatch(component, products);
+                console.log(`Best match product for adjusted ${component}:`, bestMatchProduct);
+                return { key, product: bestMatchProduct };
+              } catch (err) {
+                console.error('Error fetching adjusted product:', component, err);
+                return { key, product: null };
+              }
             }
-          }
-          return { key, product: null };
-        })
+            return { key, product: null };
+          })
+        )
       );
 
-      // Merge adjusted products with original products
       adjustedFetchedProducts.forEach(({ key, product }) => {
         if (product) {
           productResponse[key] = product;
         }
       });
 
-      // Send the final response
       res.send({ response: adjustedResponseText, products: productResponse });
       return;
 

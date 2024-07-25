@@ -28,10 +28,9 @@ const cache = new NodeCache({ stdTTL: 3600 }); // Cache for 1 hour
 
 const userAgents = [
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0',
-  'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0',
-  'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
-  // Add more user agents as needed
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36',
+  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1',
 ];
 
 const randomDelay = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1) + min)));
@@ -39,7 +38,7 @@ const randomDelay = (min, max) => new Promise(resolve => setTimeout(resolve, Mat
 const fetchWithRetry = async (url, headers, maxRetries = 5, baseDelay = 5000) => {
   for (let i = 0; i < maxRetries; i++) {
     try {
-      const response = await axios.get(url, { headers });
+      const response = await axios.get(url, { headers, timeout: 10000 });
       return response;
     } catch (error) {
       if (error.response && error.response.status === 429) {
@@ -60,21 +59,21 @@ const fetchProduct = limiter.wrap(async (searchTerm) => {
   if (cachedResult) return cachedResult;
 
   const query = encodeURIComponent(searchTerm);
-  const url = `https://kaspi.kz/shop/search/?text=${query}&q=%3AavailableInZones%3AMagnum_ZONE1&sort=relevance&filteredByCategory=false&sc=`;
+  const url = `https://kaspi.kz/shop/search/?text=${query}&hint_chips_click=false`;
 
   const headers = {
     'Host': 'kaspi.kz',
     'User-Agent': userAgents[Math.floor(Math.random() * userAgents.length)],
-    'Accept': 'application/json, text/*',
+    'Accept': 'application/json, text/javascript, */*; q=0.01',
     'Accept-Language': 'en-US,en;q=0.5',
-    'Accept-Encoding': 'gzip, deflate, br, zstd',
-    'X-KS-City': '750000000',
-    'Connection': 'keep-alive',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'X-Requested-With': 'XMLHttpRequest',
     'Referer': `https://kaspi.kz/shop/search/?text=${query}&hint_chips_click=false`,
+    'Connection': 'keep-alive',
     'Cookie': 'ks.tg=71; k_stat=aa96833e-dac6-4558-a423-eacb2f0e53e4; kaspi.storefront.cookie.city=750000000',
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
-    'Sec-Fetch-Site': 'same-origin'
+    'Sec-Fetch-Site': 'same-origin',
   };
 
   try {
@@ -114,6 +113,9 @@ const findBestMatch = (searchTerm, products) => {
 app.post('/api/generate', async (req, res) => {
   try {
     const { prompt, budget } = req.body;
+    if (!prompt) {
+      return res.status(400).json({ message: "Prompt is required" });
+    }
     console.log('Received prompt:', prompt);
     console.log('Budget:', budget);
 

@@ -1,12 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const axios = require('axios');
-const stringSimilarity = require('string-similarity');
 const dotenv = require('dotenv');
 const OpenAI = require('openai');
 const cors = require('cors');
-const Bottleneck = require('bottleneck');
-const NodeCache = require('node-cache');
+const fs = require('fs');
+const stringSimilarity = require('string-similarity');
 
 dotenv.config();
 
@@ -18,94 +16,31 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Initialize rate limiter
-const limiter = new Bottleneck({
-  minTime: 5000 // Minimum time between requests (5 seconds)
-});
-
-// Initialize cache
-const cache = new NodeCache({ stdTTL: 3600 }); // Cache for 1 hour
-
-const userAgents = [
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36',
-  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36',
-  'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1',
-];
-
-const randomDelay = (min, max) => new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * (max - min + 1) + min)));
-
-const fetchWithRetry = async (url, headers, maxRetries = 5, baseDelay = 5000) => {
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      const response = await axios.get(url, { headers, timeout: 10000 });
-      return response;
-    } catch (error) {
-      if (error.response && error.response.status === 429) {
-        const delay = baseDelay * Math.pow(2, i);
-        console.log(`Rate limited. Retrying in ${delay}ms...`);
-        await new Promise(resolve => setTimeout(resolve, delay));
-      } else {
-        throw error;
-      }
-    }
+// Function to load JSON data
+function loadJsonData(filePath) {
+  if (fs.existsSync(filePath)) {
+    const rawData = fs.readFileSync(filePath);
+    return JSON.parse(rawData);
   }
-  throw new Error('Max retries reached');
-};
+  return { components: [] };
+}
 
-const fetchProduct = limiter.wrap(async (searchTerm) => {
-  const cacheKey = `product:${searchTerm}`;
-  const cachedResult = cache.get(cacheKey);
-  if (cachedResult) return cachedResult;
+// Function to save JSON data
+function saveJsonData(filePath, data) {
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+}
 
-  const query = encodeURIComponent(searchTerm);
-  const url = `https://kaspi.kz/shop/search/?text=${query}&hint_chips_click=false`;
+// Load existing data
+const parsedComponents = loadJsonData('parsedComponents.json');
+const missingComponentsFile = 'missingComponents.json';
 
-  const headers = {
-    'Host': 'kaspi.kz',
-    'User-Agent': userAgents[Math.floor(Math.random() * userAgents.length)],
-    'Accept': 'application/json, text/javascript, */*; q=0.01',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'X-Requested-With': 'XMLHttpRequest',
-    'Referer': `https://kaspi.kz/shop/search/?text=${query}&hint_chips_click=false`,
-    'Connection': 'keep-alive',
-    'Cookie': 'ks.tg=71; k_stat=aa96833e-dac6-4558-a423-eacb2f0e53e4; kaspi.storefront.cookie.city=750000000',
-    'Sec-Fetch-Dest': 'empty',
-    'Sec-Fetch-Mode': 'cors',
-    'Sec-Fetch-Site': 'same-origin',
-  };
-
-  try {
-    await randomDelay(1000, 5000); // Random delay between 1 and 5 seconds
-    const response = await fetchWithRetry(url, headers);
-    if (response.headers['content-type'].includes('application/json')) {
-      const products = response.data.data.cards.map(card => ({
-        name: card.title,
-        price: card.unitPrice,
-        url: card.shopLink,
-        image: card.previewImages[0]?.large || '',
-        rating: card.rating,
-        reviewCount: card.reviewsQuantity,
-      }));
-      cache.set(cacheKey, products);
-      return products;
-    } else {
-      console.error('Non-JSON response received:', response.data);
-      return [];
-    }
-  } catch (error) {
-    console.error('Error fetching the JSON data:', error);
-    return [];
-  }
-});
+// Initialize missing components
+let missingComponents = loadJsonData(missingComponentsFile).components || [];
 
 const findBestMatch = (searchTerm, products) => {
   if (products.length === 0) return null;
-
-  const productNames = products.map(product => product.name);
+  const productNames = products.map(product => product.title);
   const { bestMatch } = stringSimilarity.findBestMatch(searchTerm, productNames);
-
   const bestMatchIndex = productNames.indexOf(bestMatch.target);
   return products[bestMatchIndex] || null;
 };
@@ -116,7 +51,9 @@ app.post('/api/generate', async (req, res) => {
     console.log('Received prompt:', prompt);
     console.log('Budget:', budget);
 
-    const modelId = "gpt-4o";
+    console.log('Parsed components:', parsedComponents);
+
+    const modelId = "gpt-4o-mini";
     const systemPrompt = `You are an assistant helping to build PCs with a focus on speed, affordability, and reliability.
     Make a research on the prices of the components and components themselves in Kazakhstan.
     Look up the prices strictly in KZT.
@@ -140,7 +77,7 @@ app.post('/api/generate', async (req, res) => {
 
     const currentMessages = [
       { role: "system", content: systemPrompt },
-      { role: "user", content: `${prompt} The budget for this build is ${budget} KZT.` }
+      { role: "user", content: `The budget for this build is ${budget} KZT.` }
     ];
 
     console.log('Sending messages to OpenAI:', currentMessages);
@@ -167,53 +104,50 @@ app.post('/api/generate', async (req, res) => {
       throw new Error('OpenAI response is missing one or more required components');
     }
 
-    const fetchedProducts = [];
-    for (const key of requiredComponents) {
-      const component = components[key];
-      try {
-        console.log(`Fetching products for component: ${component}`);
-        const products = await fetchProduct(component);
-        const bestMatchProduct = findBestMatch(component, products);
-        console.log(`Best match product for ${component}:`, bestMatchProduct);
-        fetchedProducts.push({ key, product: bestMatchProduct });
-      } catch (err) {
-        console.error('Error fetching product:', component, err);
-        fetchedProducts.push({ key, product: null });
+    let fetchedProducts = [];
+    let currentMissingComponents = [];
+    let productResponse = {};
+    let totalPrice = 0;
+    let adjustedResponseText = null;
+
+    // Function to fetch products and calculate total price
+    const fetchProductsAndCalculatePrice = () => {
+      fetchedProducts = [];
+      currentMissingComponents = [];
+      for (const key of requiredComponents) {
+        const component = components[key];
+        const bestMatchProduct = findBestMatch(component, parsedComponents.components);
+        if (bestMatchProduct) {
+          fetchedProducts.push({ key, product: bestMatchProduct });
+        } else {
+          currentMissingComponents.push({ key, component });
+        }
       }
-    }
 
-    const availableProducts = fetchedProducts.filter(({ product }) => product !== null);
-    console.log('Available products after filtering:', availableProducts.length);
+      productResponse = fetchedProducts.reduce((acc, { key, product }) => {
+        if (product) {
+          acc[key] = product;
+        }
+        return acc;
+      }, {});
 
-    const missingComponents = fetchedProducts
-      .filter(({ product }) => product === null)
-      .map(({ key }) => key);
+      totalPrice = Object.values(productResponse).reduce((sum, product) => sum + parseInt(product.price, 10), 0);
+    };
 
-    let productResponse = availableProducts.reduce((acc, { key, product }) => {
-      if (product) {
-        acc[key] = product;
-      }
-      return acc;
-    }, {});
+    // Initial fetch and price calculation
+    fetchProductsAndCalculatePrice();
 
-    // Calculate total price
-    const totalPrice = Object.values(productResponse).reduce((sum, product) => sum + product.price, 0);
-
-    // Send the response and return immediately if everything is okay
-    if (missingComponents.length === 0 && Math.abs(totalPrice - budget) / budget <= 0.1) {
-      res.send({ response: responseText, products: productResponse });
-      return;
-    }
-
-    // If there are missing components or the total price is not within 10% of the budget, ask OpenAI for adjustments
+    // Always perform adjustment
     const componentsWithPrices = Object.entries(productResponse)
-      .map(([key, product]) => `${key}: ${product.name} - ${product.price} KZT`)
+      .map(([key, product]) => `${key}: ${product.title} - ${product.price} KZT`)
       .join(', ');
 
-    const adjustmentPrompt = `The following components were not found or the total price (${totalPrice} KZT) is not within 10% of the budget (${budget} KZT):
-    ${missingComponents.join(', ')}. Current components and prices: ${componentsWithPrices}.
-    Please suggest alternatives for the missing components and adjust the build to be closer to the budget while maintaining performance. STRICTLY: Provide your response in the same JSON format as before. Ensure the total cost does not exceed the budget and remains within 10% of the budget.
-    And Also Please ensure that all components are real pc components because before parser could give me freezer or something random`;
+    const adjustmentPrompt = `The current build has a total price of ${totalPrice} KZT, which may not be within 10% of the budget (${budget} KZT).
+    Current components and prices: ${componentsWithPrices}.
+    ${currentMissingComponents.length > 0 ? `The following components were not found: ${currentMissingComponents.map(comp => comp.key).join(', ')}.` : ''}
+    Please adjust the build to be closer to the budget while maintaining performance. Suggest alternatives for any missing components.
+    STRICTLY: Provide your response in the same JSON format as before. Ensure the total cost does not exceed the budget and remains within 10% of the budget.
+    Also, please ensure that all components are real PC components.`;
 
     const adjustmentMessages = [
       { role: "system", content: systemPrompt },
@@ -225,42 +159,33 @@ app.post('/api/generate', async (req, res) => {
       messages: adjustmentMessages,
     });
 
-    const adjustedResponseText = adjustmentResult.choices[0].message.content;
+    adjustedResponseText = adjustmentResult.choices[0].message.content;
     console.log('Received adjusted response from OpenAI: \n', adjustedResponseText);
 
     try {
-      const adjustedComponents = JSON.parse(adjustedResponseText);
+      components = JSON.parse(adjustedResponseText);
+      fetchProductsAndCalculatePrice();
 
-      for (const key in adjustedComponents) {
-        if (adjustedComponents.hasOwnProperty(key)) {
-          const component = adjustedComponents[key];
-          if (typeof component === 'string') {
-            try {
-              console.log(`Fetching products for adjusted component: ${component}`);
-              const products = await fetchProduct(component);
-              const bestMatchProduct = findBestMatch(component, products);
-              console.log(`Best match product for adjusted ${component}:`, bestMatchProduct);
-              productResponse[key] = bestMatchProduct;
-            } catch (err) {
-              console.error('Error fetching adjusted product:', component, err);
-            }
-          }
-        }
+      if (currentMissingComponents.length > 0) {
+        missingComponents = missingComponents.concat(currentMissingComponents);
+        saveJsonData(missingComponentsFile, { components: missingComponents });
       }
-
-      res.send({ response: adjustedResponseText, products: productResponse });
-      return;
-
     } catch (error) {
       console.error('Failed to parse adjusted JSON response from OpenAI:', error);
-      res.status(500).json({ message: "Internal server error" });
-      return;
     }
+
+    // Send only one response at the end
+    res.json({
+      adjustedResponse: adjustedResponseText,
+      products: productResponse,
+      totalPrice: totalPrice,
+      missingComponents: currentMissingComponents,
+      budgetDifference: totalPrice - budget
+    });
 
   } catch (err) {
     console.error('Error in generateResponse:', err);
     res.status(500).json({ message: "Internal server error" });
-    return;
   }
 });
 

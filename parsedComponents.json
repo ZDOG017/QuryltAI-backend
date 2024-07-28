@@ -1,0 +1,1990 @@
+{
+  "components": [
+    {
+      "title": "NVIDIA GeForce RTX 4090 24 Гб",
+      "price": "2140496",
+      "url": "https://kaspi.kz/shop/p/nvidia-geforce-rtx-4090-24-gb-112551502/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8c/hc9/82828264144926.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI GeForce RTX 4080 SUPER VENTUS 3X OC 16 Гб",
+      "price": "681370",
+      "url": "https://kaspi.kz/shop/p/msi-geforce-rtx-4080-super-ventus-3x-oc-16-gb-118040843/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hac/hbd/85621303050270.jpg?format=gallery-large"
+    },
+    {
+      "title": "Colorful Colorful GeForce RTX 4070 Ti 12 ГБ",
+      "price": "609990",
+      "url": "https://kaspi.kz/shop/p/colorful-colorful-geforce-rtx-4070-ti-12-gb-110031679/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h25/h7a/80395587911710.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Dual GeForce RTX 4070 OC 12 Гб",
+      "price": "327100",
+      "url": "https://kaspi.kz/shop/p/asus-dual-geforce-rtx-4070-oc-12-gb-110679659/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/had/h3a/81091286237214.png?format=gallery-large"
+    },
+    {
+      "title": "Palit GeForce RTX 4060 DUAL 8GB",
+      "price": "174990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-4060-dual-8gb-111976843/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h2e/h30/82307192684574.png?format=gallery-large"
+    },
+    {
+      "title": "Palit GeForce RTX 4060 DUAL 8GB",
+      "price": "174990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-4060-dual-8gb-111976843/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h2e/h30/82307192684574.png?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce RTX 3060 Ti DUAL 8 ГБ",
+      "price": "199990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3060-ti-dual-8-gb-102670980/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h89/h26/64351422808094.jpg?format=preview-large"
+    },
+    {
+      "title": "Manli NVIDIA GeForce RTX 3080 10GB",
+      "price": "1149990",
+      "url": "https://kaspi.kz/shop/p/manli-nvidia-geforce-rtx-3080-10gb-101418880/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "PNY GeForce RTX 3080 Ti XLR8 Gaming 12 ГБ",
+      "price": "550000",
+      "url": "https://kaspi.kz/shop/p/pny-geforce-rtx-3080-ti-xlr8-gaming-12-gb-103527550/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he7/h53/64844941557790.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce RTX 3080 GameRock NED3080U19IA-1020G 10GB",
+      "price": "279 999",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3080-gamerock-ned3080u19ia-1020g-10gb-102373074/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h51/h88/64142534410270.jpg?format=gallery-large"
+    },
+    {
+      "title": "Palit GeForce RTX 3070 Ti GamingPro 8 ГБ",
+      "price": "225000",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3070-ti-gamingpro-8-gb-101648509/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd0/h8e/63827788070942.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce RTX 3070 GameRock 8Gb",
+      "price": "369050",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3070-gamerock-8gb-100959334/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Palit GeForce RTX 3060 Ti DUAL 8 ГБ",
+      "price": "199990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3060-ti-dual-8-gb-102670980/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h89/h26/64351422808094.jpg?format=preview-large"
+    },
+    {
+      "title": "GIGABYTE GeForce RTX 3060 VISION OC 12GB",
+      "price": "399990",
+      "url": "https://kaspi.kz/shop/p/gigabyte-geforce-rtx-3060-vision-oc-12gb-101115185/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "MSI GeForce RTX 3050 AERO ITX OC 8 ГБ",
+      "price": "165544",
+      "url": "https://kaspi.kz/shop/p/msi-geforce-rtx-3050-aero-itx-oc-8-gb-106509444/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "MSI Radeon RX 7900 XTX GAMING TRIO CLASSIC 24 Гб",
+      "price": "699990",
+      "url": "https://kaspi.kz/shop/p/msi-radeon-rx-7900-xtx-gaming-trio-classic-24-gb-111923712/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASUS TUF Gaming Radeon RX 7900 XT OC 20 ГБ",
+      "price": "559450",
+      "url": "https://kaspi.kz/shop/p/asus-tuf-gaming-radeon-rx-7900-xt-oc-20-gb-110217510/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "PowerColor AMD Radeon RX 7800 XT Fighter 16 Гб",
+      "price": "400000",
+      "url": "https://kaspi.kz/shop/p/powercolor-amd-radeon-rx-7800-xt-fighter-16-gb-117937201/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h71/ha4/85586484953118.jpg?format=preview-large"
+    },
+    {
+      "title": "PowerColor AMD Radeon RX 7700 XT Fighter 12 Гб",
+      "price": "281434",
+      "url": "https://kaspi.kz/shop/p/powercolor-amd-radeon-rx-7700-xt-fighter-12-gb-117937207/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hce/hb6/85586667765790.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock Radeon RX 7600 Steel Legend 8 Гб",
+      "price": "184220",
+      "url": "https://kaspi.kz/shop/p/asrock-radeon-rx-7600-steel-legend-8-gb-113508736/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf5/h6a/83998546100254.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock AMD Radeon RX 6900 XT OC Formula 16 ГБ",
+      "price": "1101100",
+      "url": "https://kaspi.kz/shop/p/asrock-amd-radeon-rx-6900-xt-oc-formula-16-gb-105518730/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb9/h13/64537425182750.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock AMD Radeon RX 6900 XT OC Formula 16 ГБ",
+      "price": "1101100",
+      "url": "https://kaspi.kz/shop/p/asrock-amd-radeon-rx-6900-xt-oc-formula-16-gb-105518730/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb9/h13/64537425182750.jpg?format=preview-large"
+    },
+    {
+      "title": "XFX Speedster SWFT 210 AMD Radeon RX 6600 8 ГБ",
+      "price": "135000",
+      "url": "https://kaspi.kz/shop/p/xfx-speedster-swft-210-amd-radeon-rx-6600-8-gb-103372235/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h38/h56/64023388782622.jpg?format=preview-large"
+    },
+    {
+      "title": "Sapphire Pulse Radeon RX 6800 XT 16GB",
+      "price": "999990",
+      "url": "https://kaspi.kz/shop/p/sapphire-pulse-radeon-rx-6800-xt-16gb-102417074/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hfe/h25/64070663143454.jpg?format=preview-large"
+    },
+    {
+      "title": "PowerColor AMD Radeon RX 6700 XT 12 ГБ",
+      "price": "380000",
+      "url": "https://kaspi.kz/shop/p/powercolor-amd-radeon-rx-6700-xt-12-gb-104464299/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he0/hee/64265378824222.jpg?format=preview-large"
+    },
+    {
+      "title": "HP Pavilion Gaming TG01-2087ur 60Q91EA черный",
+      "price": "870870",
+      "url": "https://kaspi.kz/shop/p/hp-pavilion-gaming-tg01-2087ur-60q91ea-chernyi-108063161/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h55/h00/66935302160414.jpg?format=preview-large"
+    },
+    {
+      "title": "XFX Speedster SWFT 210 AMD Radeon RX 6600 8 ГБ",
+      "price": "135000",
+      "url": "https://kaspi.kz/shop/p/xfx-speedster-swft-210-amd-radeon-rx-6600-8-gb-103372235/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h38/h56/64023388782622.jpg?format=preview-large"
+    },
+    {
+      "title": "Sapphire Pulse Radeon RX 6500 XT 4 ГБ",
+      "price": "144920",
+      "url": "https://kaspi.kz/shop/p/sapphire-pulse-radeon-rx-6500-xt-4-gb-104059757/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h55/he0/63948761825310.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce GTX 1660Ti Dual 6 ГБ",
+      "price": "135000",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1660ti-dual-6-gb-6701183/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hcf/h8b/63841162002462.jpg?format=preview-large"
+    },
+    {
+      "title": "Inno3D GeForce GTX 1660 Super 6GB",
+      "price": "162990",
+      "url": "https://kaspi.kz/shop/p/inno3d-geforce-gtx-1660-super-6gb-101457141/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Inno3D GeForce GTX 1660 Super 6GB",
+      "price": "162990",
+      "url": "https://kaspi.kz/shop/p/inno3d-geforce-gtx-1660-super-6gb-101457141/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Palit GeForce GTX 1660 Super GP 6 ГБ",
+      "price": "104999",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1660-super-gp-6-gb-100017856/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h88/h29/63822602043422.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce GTX 1650 GP OC 4GB",
+      "price": "140000",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1650-gp-oc-4gb-101379681/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil GeForce GTX 1050 2 ГБ",
+      "price": "80000",
+      "url": "https://kaspi.kz/shop/p/geil-geforce-gtx-1050-2-gb-106092695/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/ha7/64719669887006.jpg?format=preview-large"
+    },
+    {
+      "title": "PELADN Radeon RX 580 8 ГБ",
+      "price": "52500",
+      "url": "https://kaspi.kz/shop/p/peladn-radeon-rx-580-8-gb-110566490/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h28/h04/80944978755614.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Radeon R5SL240G 240GB",
+      "price": "8311",
+      "url": "https://kaspi.kz/shop/p/amd-radeon-r5sl240g-240gb-102038191/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hb2/64152676991006.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Dual Radeon RX 560 DUAL-RX560-4G 4 ГБ",
+      "price": "77035",
+      "url": "https://kaspi.kz/shop/p/asus-dual-radeon-rx-560-dual-rx560-4g-4-gb-108466042/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3b/he5/67943455686686.jpg?format=preview-large"
+    },
+    {
+      "title": "Biostar Radeon RX550 VA5515RF41 4Gb",
+      "price": "50000",
+      "url": "https://kaspi.kz/shop/p/biostar-radeon-rx550-va5515rf41-4gb-100490886/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3f/h28/64006834389022.jpg?format=preview-large"
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=preview-large"
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil GeForce GTX 1050 2 ГБ",
+      "price": "80000",
+      "url": "https://kaspi.kz/shop/p/geil-geforce-gtx-1050-2-gb-106092695/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/ha7/64719669887006.jpg?format=preview-large"
+    },
+    {
+      "title": "Inno3D GeForce GTX 1660 Super 6GB",
+      "price": "162990",
+      "url": "https://kaspi.kz/shop/p/inno3d-geforce-gtx-1660-super-6gb-101457141/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6d/h74/64106402086942.jpg?format=gallery-large"
+    },
+    {
+      "title": "Palit GeForce GTX 1660 Super GP 6 ГБ",
+      "price": "104999",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1660-super-gp-6-gb-100017856/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h88/h29/63822602043422.jpg?format=preview-large"
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=gallery-large"
+    },
+    {
+      "title": "Artec Hulkbuster 480 черный",
+      "price": "461940",
+      "url": "https://kaspi.kz/shop/p/artec-hulkbuster-480-chernyi-116181572/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hc5/h66/85003195514910.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Radeon R5SL240G 240GB",
+      "price": "8311",
+      "url": "https://kaspi.kz/shop/p/amd-radeon-r5sl240g-240gb-102038191/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hb2/64152676991006.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Radeon R5SL240G 240GB",
+      "price": "8311",
+      "url": "https://kaspi.kz/shop/p/amd-radeon-r5sl240g-240gb-102038191/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hb2/64152676991006.jpg?format=preview-large"
+    },
+    {
+      "title": "PNY Quadro RTX 4000 VCQRTX4000-PB 8Gb",
+      "price": "600000",
+      "url": "https://kaspi.kz/shop/p/pny-quadro-rtx-4000-vcqrtx4000-pb-8gb-102907711/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h25/h0e/64197435260958.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 9 7950X OEM",
+      "price": "272940",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-9-7950x-oem-107747548/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h1e/hc6/66198072885278.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 9 7900X OEM",
+      "price": "193819",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-9-7900x-oem-107747479/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb4/h6d/67096630362142.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 9 5900X WOF",
+      "price": "197684",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-9-5900x-wof-116305685/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h1f/h57/85044864679966.png?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 7 5800X OEM",
+      "price": "117959",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-7-5800x-oem-101152156/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h59/he6/64226564898846.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 7 5700X OEM",
+      "price": "74799",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-7-5700x-oem-105933955/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h72/h13/86371729047582.png?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 5 5600X OEM",
+      "price": "56200",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-5-5600x-oem-100842722/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd9/h02/63826994429982.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 5 5600 OEM",
+      "price": "48464",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-5-5600-oem-105933939/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h94/h7a/85518562983966.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 5 5600X OEM",
+      "price": "56200",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-5-5600x-oem-100842722/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd9/h02/63826994429982.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 5 3600 OEM",
+      "price": "37820",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-5-3600-oem-6400344/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hbf/h89/63840261079070.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 5 2600 OEM",
+      "price": "36999",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-5-2600-oem-6400282/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hce/h98/63760080601118.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i9 13900K OEM",
+      "price": "312219",
+      "url": "https://kaspi.kz/shop/p/intel-core-i9-13900k-oem-107504185/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h01/h9f/65531739439134.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i9-12900K OEM",
+      "price": "207912",
+      "url": "https://kaspi.kz/shop/p/intel-core-i9-12900k-oem-102908480/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb1/ha7/64373159985182.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i9 11900KF OEM",
+      "price": "101880",
+      "url": "https://kaspi.kz/shop/p/intel-core-i9-11900kf-oem-101962641/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Intel Core i7 13700K OEM",
+      "price": "206000",
+      "url": "https://kaspi.kz/shop/p/intel-core-i7-13700k-oem-107747439/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7e/h09/66197847638046.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i7-12700K BOX",
+      "price": "139990",
+      "url": "https://kaspi.kz/shop/p/intel-core-i7-12700k-box-102908244/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he9/h27/64373995438110.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i7 11700K OEM",
+      "price": "119990",
+      "url": "https://kaspi.kz/shop/p/intel-core-i7-11700k-oem-101263925/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf7/hb3/63995232288798.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i7-10700 OEM",
+      "price": "98000",
+      "url": "https://kaspi.kz/shop/p/intel-core-i7-10700-oem-100419541/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Intel Core i5 13600K OEM",
+      "price": "159690",
+      "url": "https://kaspi.kz/shop/p/intel-core-i5-13600k-oem-107526890/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hee/h81/65579843092510.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i5-12600K BOX",
+      "price": "115764",
+      "url": "https://kaspi.kz/shop/p/intel-core-i5-12600k-box-103661978/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h42/h07/64408522457118.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i5 11600K OEM",
+      "price": "54551",
+      "url": "https://kaspi.kz/shop/p/intel-core-i5-11600k-oem-101539129/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h32/h80/64092633006110.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i5-10600K OEM",
+      "price": "98813",
+      "url": "https://kaspi.kz/shop/p/intel-core-i5-10600k-oem-100541625/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hec/h27/63931507507230.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i5 9600K OEM",
+      "price": "116111",
+      "url": "https://kaspi.kz/shop/p/intel-core-i5-9600k-oem-6400290/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3e/h7e/63762644762654.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i3 12100F OEM",
+      "price": "36199",
+      "url": "https://kaspi.kz/shop/p/intel-core-i3-12100f-oem-103650823/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/haa/h02/64303205875742.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i3-10100 OEM",
+      "price": "43770",
+      "url": "https://kaspi.kz/shop/p/intel-core-i3-10100-oem-100422706/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Intel Core i3 9100F OEM",
+      "price": "27990",
+      "url": "https://kaspi.kz/shop/p/intel-core-i3-9100f-oem-6400333/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h46/h06/63785023307806.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i5 9400F OEM",
+      "price": "39000",
+      "url": "https://kaspi.kz/shop/p/intel-core-i5-9400f-oem-6400313/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb9/h31/63781385469982.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Core i5-8400 Tray",
+      "price": "49999",
+      "url": "https://kaspi.kz/shop/p/intel-core-i5-8400-tray-100067693/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h37/h59/63843584933918.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Vivobook S M3502QA-L1044W 90NB0XX2-M001J0 черный",
+      "price": "399889",
+      "url": "https://kaspi.kz/shop/p/asus-vivobook-s-m3502qa-l1044w-90nb0xx2-m001j0-chernyi-107490221/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "AMD Ryzen 3 1200 OEM",
+      "price": "19999",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-3-1200-oem-6400240/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "AMD Ryzen 3 3200G OEM",
+      "price": "32610",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-3-3200g-oem-6400332/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hda/63785184591902.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Ryzen 3 3200G OEM",
+      "price": "32610",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-3-3200g-oem-6400332/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hda/63785184591902.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Athlon 3000G OEM",
+      "price": "17518",
+      "url": "https://kaspi.kz/shop/p/amd-athlon-3000g-oem-100135315/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h79/h2b/63849745186846.jpg?format=preview-large"
+    },
+    {
+      "title": "Artec Hulkbuster 10700 черный",
+      "price": "125122",
+      "url": "https://kaspi.kz/shop/p/artec-hulkbuster-10700-chernyi-115600598/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h26/h83/84772509450270.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Pentium G4400",
+      "price": "23500",
+      "url": "https://kaspi.kz/shop/p/intel-pentium-g4400-6400060/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Intel Pentium G4560",
+      "price": "25987",
+      "url": "https://kaspi.kz/shop/p/intel-pentium-g4560-6400181/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hcc/h30/63767737729054.jpg?format=preview-large"
+    },
+    {
+      "title": "Gameclub Clerk 1 черный",
+      "price": "281970",
+      "url": "https://kaspi.kz/shop/p/gameclub-clerk-1-chernyi-108508389/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hfe/h8b/68036918673438.jpg?format=preview-large"
+    },
+    {
+      "title": "Intel Celeron G4900 OEM",
+      "price": "23399",
+      "url": "https://kaspi.kz/shop/p/intel-celeron-g4900-oem-6400254/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/h92/63775242518558.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS ROG Strix B760-F Gaming WiFi",
+      "price": "167690",
+      "url": "https://kaspi.kz/shop/p/asus-rog-strix-b760-f-gaming-wifi-109636916/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASUS ROG Strix B760-F Gaming WiFi",
+      "price": "167690",
+      "url": "https://kaspi.kz/shop/p/asus-rog-strix-b760-f-gaming-wifi-109636916/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASUS TUF Gaming X670E-Plus WiFi",
+      "price": "191096",
+      "url": "https://kaspi.kz/shop/p/asus-tuf-gaming-x670e-plus-wifi-115912128/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h50/he5/84919272865822.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Prime B760M-A CSM",
+      "price": "65277",
+      "url": "https://kaspi.kz/shop/p/asus-prime-b760m-a-csm-115193695/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASUS Prime B760M-A CSM",
+      "price": "65277",
+      "url": "https://kaspi.kz/shop/p/asus-prime-b760m-a-csm-115193695/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "GIGABYTE B550 AORUS Elite V2",
+      "price": "77000",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550-aorus-elite-v2-101312038/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h9f/h9b/64348438134814.jpg?format=preview-large"
+    },
+    {
+      "title": "GIGABYTE B550 AORUS Elite V2",
+      "price": "77000",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550-aorus-elite-v2-101312038/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "GIGABYTE Z690 AORUS PRO",
+      "price": "174940",
+      "url": "https://kaspi.kz/shop/p/gigabyte-z690-aorus-pro-103287961/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb7/hb4/64176972693534.jpg?format=preview-large"
+    },
+    {
+      "title": "GIGABYTE B450 AORUS M (rev. 1.0)",
+      "price": "39900",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b450-aorus-m-rev-1-0--6500907/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h1d/h01/63758113275934.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI MAG B550 TOMAHAWK",
+      "price": "83589",
+      "url": "https://kaspi.kz/shop/p/msi-mag-b550-tomahawk-100940167/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he6/h43/63972447387678.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI MPG B550 GAMING PLUS",
+      "price": "66230",
+      "url": "https://kaspi.kz/shop/p/msi-mpg-b550-gaming-plus-101318218/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf3/h02/64583210008606.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI B550-A PRO",
+      "price": "63408",
+      "url": "https://kaspi.kz/shop/p/msi-b550-a-pro-100768668/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "MSI MAG B550 TOMAHAWK",
+      "price": "83589",
+      "url": "https://kaspi.kz/shop/p/msi-mag-b550-tomahawk-100940167/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he6/h43/63972447387678.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock B550M Steel Legend",
+      "price": "70490",
+      "url": "https://kaspi.kz/shop/p/asrock-b550m-steel-legend-100535192/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hbe/ha5/64046243184670.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock X570 Phantom Gaming 4",
+      "price": "78730",
+      "url": "https://kaspi.kz/shop/p/asrock-x570-phantom-gaming-4-6501016/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h18/h9f/63775566331934.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock Z790 Steel Legend WiFi",
+      "price": "135585",
+      "url": "https://kaspi.kz/shop/p/asrock-z790-steel-legend-wifi-107971313/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd4/h87/66702514454558.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock X370M Pro4",
+      "price": "43090",
+      "url": "https://kaspi.kz/shop/p/asrock-x370m-pro4-6500857/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASRock Z690 Taichi",
+      "price": "194349",
+      "url": "https://kaspi.kz/shop/p/asrock-z690-taichi-104178311/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h31/h8a/64166893289502.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS ROG Strix B760-F Gaming WiFi",
+      "price": "167690",
+      "url": "https://kaspi.kz/shop/p/asus-rog-strix-b760-f-gaming-wifi-109636916/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hef/ha9/79515547205662.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS TUF Gaming B550-PLUS WI-FI",
+      "price": "93375",
+      "url": "https://kaspi.kz/shop/p/asus-tuf-gaming-b550-plus-wi-fi-103326365/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he5/hbc/63954551898142.jpg?format=preview-large"
+    },
+    {
+      "title": "GIGABYTE B550 AORUS Elite AX V2",
+      "price": "94465",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550-aorus-elite-ax-v2-100764412/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "GIGABYTE B550M DS3H",
+      "price": "52985",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550m-ds3h-114967632/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h03/hbb/84607662817310.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI MPG B550 GAMING PLUS",
+      "price": "66230",
+      "url": "https://kaspi.kz/shop/p/msi-mpg-b550-gaming-plus-101318218/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf3/h02/64583210008606.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI MAG X670E TOMAHAWK WIFI",
+      "price": "152420",
+      "url": "https://kaspi.kz/shop/p/msi-mag-x670e-tomahawk-wifi-112823156/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hfc/haa/83129025593374.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock B450 Steel Legend",
+      "price": "58430",
+      "url": "https://kaspi.kz/shop/p/asrock-b450-steel-legend-6501005/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h28/hb6/63825012195358.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock Z690 Phantom Gaming 4",
+      "price": "93200",
+      "url": "https://kaspi.kz/shop/p/asrock-z690-phantom-gaming-4-103436542/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/hb7/64112369205278.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Prime H510M-R-SI",
+      "price": "35231",
+      "url": "https://kaspi.kz/shop/p/asus-prime-h510m-r-si-103145979/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h79/h6a/64185129828382.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS ROG Crosshair VIII Hero Wi-Fi",
+      "price": "246710",
+      "url": "https://kaspi.kz/shop/p/asus-rog-crosshair-viii-hero-wi-fi-100017063/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASUS TUF B450-Pro Gaming",
+      "price": "81444",
+      "url": "https://kaspi.kz/shop/p/asus-tuf-b450-pro-gaming-6500944/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h5a/h20/63783822098462.jpg?format=preview-large"
+    },
+    {
+      "title": "Apple Vision Pro 512 Gb",
+      "price": "1688999",
+      "url": "https://kaspi.kz/shop/p/apple-vision-pro-512-gb-116472619/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "GIGABYTE B760M DS3H",
+      "price": "64860",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b760m-ds3h-112678938/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6c/hb6/82964837138462.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI MAG B550 TOMAHAWK",
+      "price": "83589",
+      "url": "https://kaspi.kz/shop/p/msi-mag-b550-tomahawk-100940167/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he6/h43/63972447387678.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI B550-A PRO",
+      "price": "63408",
+      "url": "https://kaspi.kz/shop/p/msi-b550-a-pro-100768668/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASRock B660M Steel Legend",
+      "price": "90290",
+      "url": "https://kaspi.kz/shop/p/asrock-b660m-steel-legend-104704176/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7a/hfb/65134699773982.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock Z690 Phantom Gaming 4",
+      "price": "93200",
+      "url": "https://kaspi.kz/shop/p/asrock-z690-phantom-gaming-4-103436542/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/hb7/64112369205278.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Prime B760M-A CSM",
+      "price": "65277",
+      "url": "https://kaspi.kz/shop/p/asus-prime-b760m-a-csm-115193695/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h53/haa/84668741713950.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS ROG Strix B760-F Gaming WiFi",
+      "price": "167690",
+      "url": "https://kaspi.kz/shop/p/asus-rog-strix-b760-f-gaming-wifi-109636916/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "GIGABYTE B550 AORUS Elite V2",
+      "price": "77000",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550-aorus-elite-v2-101312038/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h9f/h9b/64348438134814.jpg?format=preview-large"
+    },
+    {
+      "title": "GIGABYTE B550M DS3H",
+      "price": "52985",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550m-ds3h-114967632/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "MSI MPG Z790 CARBON WIFI",
+      "price": "221703",
+      "url": "https://kaspi.kz/shop/p/msi-mpg-z790-carbon-wifi-109774270/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3a/h64/79845440389150.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI B550M PRO-VDH",
+      "price": "54210",
+      "url": "https://kaspi.kz/shop/p/msi-b550m-pro-vdh-100985897/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/ha7/h49/63964527427614.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock B550 Phantom Gaming 4",
+      "price": "52021",
+      "url": "https://kaspi.kz/shop/p/asrock-b550-phantom-gaming-4-100531296/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h68/h0a/64046260551710.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock B550 EXTREME4",
+      "price": "90814",
+      "url": "https://kaspi.kz/shop/p/asrock-b550-extreme4-100764044/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h57/hf7/64075481219102.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Prime B760M-A CSM",
+      "price": "65277",
+      "url": "https://kaspi.kz/shop/p/asus-prime-b760m-a-csm-115193695/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h53/haa/84668741713950.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS TUF Gaming VG259QM черный",
+      "price": "159999",
+      "url": "https://kaspi.kz/shop/p/asus-tuf-gaming-vg259qm-chernyi-101314718/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "GIGABYTE B550 Gaming X V2",
+      "price": "66129",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550-gaming-x-v2-101072792/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "GIGABYTE B550M DS3H",
+      "price": "52985",
+      "url": "https://kaspi.kz/shop/p/gigabyte-b550m-ds3h-114967632/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h03/hbb/84607662817310.jpg?format=preview-large"
+    },
+    {
+      "title": "MSI B550-A PRO",
+      "price": "63408",
+      "url": "https://kaspi.kz/shop/p/msi-b550-a-pro-100768668/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hef/hec/64059516059678.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock B550 EXTREME4",
+      "price": "90814",
+      "url": "https://kaspi.kz/shop/p/asrock-b550-extreme4-100764044/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h57/hf7/64075481219102.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair RM850x 850W",
+      "price": "130000",
+      "url": "https://kaspi.kz/shop/p/corsair-rm850x-850w-100432439/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h81/h9b/63922011766814.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair RM750x 750W",
+      "price": "81252",
+      "url": "https://kaspi.kz/shop/p/corsair-rm750x-750w-9700326/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h1a/h3f/63809763049502.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair RM650 650W",
+      "price": "46550",
+      "url": "https://kaspi.kz/shop/p/corsair-rm650-650w-100053267/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h09/h8b/63809880227870.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair CX650 650 Вт",
+      "price": "42633",
+      "url": "https://kaspi.kz/shop/p/corsair-cx650-650-vt-121150241/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h39/h96/86475192926238.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair CX750M 750W",
+      "price": "95000",
+      "url": "https://kaspi.kz/shop/p/corsair-cx750m-750w-9700308/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h45/h6c/63800803655710.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair CX750M 750W",
+      "price": "95000",
+      "url": "https://kaspi.kz/shop/p/corsair-cx750m-750w-9700308/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h45/h6c/63800803655710.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair HS35 черный",
+      "price": "19538",
+      "url": "https://kaspi.kz/shop/p/corsair-hs35-chernyi-105738016/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb8/hb4/64523445501982.jpg?format=preview-large"
+    },
+    {
+      "title": "SuperNova Cream крем для тела 50 мл",
+      "price": "9499",
+      "url": "https://kaspi.kz/shop/p/supernova-cream-krem-dlja-tela-50-ml-117751195/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h64/h68/85523617382430.jpg?format=preview-large"
+    },
+    {
+      "title": "SuperNova Cream крем для тела 50 мл",
+      "price": "9499",
+      "url": "https://kaspi.kz/shop/p/supernova-cream-krem-dlja-tela-50-ml-117751195/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h64/h68/85523617382430.jpg?format=preview-large"
+    },
+    {
+      "title": "SuperNova Cream крем для тела 50 мл",
+      "price": "9499",
+      "url": "https://kaspi.kz/shop/p/supernova-cream-krem-dlja-tela-50-ml-117751195/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h64/h68/85523617382430.jpg?format=preview-large"
+    },
+    {
+      "title": "EVGA 700 W1 100-W1-0700-K2 700W",
+      "price": "60000",
+      "url": "https://kaspi.kz/shop/p/evga-700-w1-100-w1-0700-k2-700w-100360580/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7d/h33/63895364337694.jpg?format=preview-large"
+    },
+    {
+      "title": "EVGA 700 W1 100-W1-0700-K2 700W",
+      "price": "60000",
+      "url": "https://kaspi.kz/shop/p/evga-700-w1-100-w1-0700-k2-700w-100360580/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7d/h33/63895364337694.jpg?format=preview-large"
+    },
+    {
+      "title": "Насадка YOKE ES-850",
+      "price": "3000",
+      "url": "https://kaspi.kz/shop/p/nasadka-yoke-es-850-106722528/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/ha2/ha2/64488768831518.jpg?format=preview-large"
+    },
+    {
+      "title": "Seasonic Focus GX-1000 1000W",
+      "price": "102090",
+      "url": "https://kaspi.kz/shop/p/seasonic-focus-gx-1000-1000w-101192155/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6e/h96/64010685939742.jpg?format=preview-large"
+    },
+    {
+      "title": "Seasonic Focus GX-1000 1000W",
+      "price": "102090",
+      "url": "https://kaspi.kz/shop/p/seasonic-focus-gx-1000-1000w-101192155/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6e/h96/64010685939742.jpg?format=preview-large"
+    },
+    {
+      "title": "Seasonic S12III-550 550W",
+      "price": "44000",
+      "url": "https://kaspi.kz/shop/p/seasonic-s12iii-550-550w-100754210/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hde/h19/63820502073374.jpg?format=preview-large"
+    },
+    {
+      "title": "Seasonic S12III-550 550W",
+      "price": "44000",
+      "url": "https://kaspi.kz/shop/p/seasonic-s12iii-550-550w-100754210/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hde/h19/63820502073374.jpg?format=preview-large"
+    },
+    {
+      "title": "Seasonic Prime TX-850 850W",
+      "price": "172113",
+      "url": "https://kaspi.kz/shop/p/seasonic-prime-tx-850-850w-100754221/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h13/hb9/63946700193822.jpg?format=preview-large"
+    },
+    {
+      "title": "Seasonic PRIME PX-1000 1000W",
+      "price": "147340",
+      "url": "https://kaspi.kz/shop/p/seasonic-prime-px-1000-1000w-101831082/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h5e/h5b/64180366376990.jpg?format=preview-large"
+    },
+    {
+      "title": "CoolerMaster MWE Gold 750 V2 Full Modular 750W черный",
+      "price": "69100",
+      "url": "https://kaspi.kz/shop/p/coolermaster-mwe-gold-750-v2-full-modular-750w-chernyi-101424370/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8d/h42/64040176320542.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MWE Bronze 650 V2 650W",
+      "price": "39567",
+      "url": "https://kaspi.kz/shop/p/cooler-master-mwe-bronze-650-v2-650w-100360613/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hdd/h82/63752733229086.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MWE Bronze 650 V2 650W",
+      "price": "39567",
+      "url": "https://kaspi.kz/shop/p/cooler-master-mwe-bronze-650-v2-650w-100360613/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hdd/h82/63752733229086.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MWE Bronze 550 V2 550W",
+      "price": "42263",
+      "url": "https://kaspi.kz/shop/p/cooler-master-mwe-bronze-550-v2-550w-100360614/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h50/h66/63860726005790.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MPE-8501-AFAAG 850W",
+      "price": "67830",
+      "url": "https://kaspi.kz/shop/p/cooler-master-mpe-8501-afaag-850w-101436676/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Cooler Master MWE V2 White 750W",
+      "price": "45490",
+      "url": "https://kaspi.kz/shop/p/cooler-master-mwe-v2-white-750w-101128435/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h15/h1e/63943906263070.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Toughpower GF1 850W",
+      "price": "75530",
+      "url": "https://kaspi.kz/shop/p/thermaltake-toughpower-gf1-850w-101202971/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h17/hee/63942525583390.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Toughpower GF1 750W",
+      "price": "57300",
+      "url": "https://kaspi.kz/shop/p/thermaltake-toughpower-gf1-750w-101202800/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h03/ha2/84534476963870.png?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Smart RGB 700W",
+      "price": "31198",
+      "url": "https://kaspi.kz/shop/p/thermaltake-smart-rgb-700w-9700372/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h46/hac/63836911173662.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Smart RGB 700W",
+      "price": "31198",
+      "url": "https://kaspi.kz/shop/p/thermaltake-smart-rgb-700w-9700372/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h46/hac/63836911173662.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Smart RGB 500W",
+      "price": "23889",
+      "url": "https://kaspi.kz/shop/p/thermaltake-smart-rgb-500w-9700239/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h0b/h3e/63779498229790.jpg?format=preview-large"
+    },
+    {
+      "title": "Be quiet Straight Power 11 850 Вт",
+      "price": "94260",
+      "url": "https://kaspi.kz/shop/p/be-quiet-straight-power-11-850-vt-9700394/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h75/h12/63836420014110.jpg?format=preview-large"
+    },
+    {
+      "title": "Be quiet Straight Power 11 750 Вт",
+      "price": "79264",
+      "url": "https://kaspi.kz/shop/p/be-quiet-straight-power-11-750-vt-9700395/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h9c/h04/63783116996638.jpg?format=preview-large"
+    },
+    {
+      "title": "be quiet! Pure Power 11 600W",
+      "price": "49285",
+      "url": "https://kaspi.kz/shop/p/be-quiet-pure-power-11-600w-100597628/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h55/hd7/64091254947870.jpg?format=preview-large"
+    },
+    {
+      "title": "be quiet! Pure Power 11 500W",
+      "price": "40387",
+      "url": "https://kaspi.kz/shop/p/be-quiet-pure-power-11-500w-100597648/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h51/h81/64090811269150.jpg?format=preview-large"
+    },
+    {
+      "title": "NZXT C750 750W",
+      "price": "132241",
+      "url": "https://kaspi.kz/shop/p/nzxt-c750-750w-101128383/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h12/h66/63942957039646.jpg?format=preview-large"
+    },
+    {
+      "title": "NZXT C750 750W",
+      "price": "132241",
+      "url": "https://kaspi.kz/shop/p/nzxt-c750-750w-101128383/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h12/h66/63942957039646.jpg?format=preview-large"
+    },
+    {
+      "title": "NZXT E650 650W",
+      "price": "78100",
+      "url": "https://kaspi.kz/shop/p/nzxt-e650-650w-9700400/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hc9/h9c/63783534952478.jpg?format=preview-large"
+    },
+    {
+      "title": "AeroCool KCAS Plus Gold 750W RGB",
+      "price": "38581",
+      "url": "https://kaspi.kz/shop/p/aerocool-kcas-plus-gold-750w-rgb-101202797/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "AeroCool KCAS Plus Gold 650W RGB",
+      "price": "37423",
+      "url": "https://kaspi.kz/shop/p/aerocool-kcas-plus-gold-650w-rgb-101202974/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h0c/hbd/64065976467486.jpg?format=preview-large"
+    },
+    {
+      "title": "ILAN Gamer zone",
+      "price": "1000",
+      "url": "https://kaspi.kz/shop/p/ilan-gamer-zone-107215602/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd6/hc2/64340718059550.jpg?format=preview-large"
+    },
+    {
+      "title": "ILAN Gamer zone",
+      "price": "1000",
+      "url": "https://kaspi.kz/shop/p/ilan-gamer-zone-107215602/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd6/hc2/64340718059550.jpg?format=preview-large"
+    },
+    {
+      "title": "be quiet! Straight Power 11 Platinum 850W",
+      "price": "125000",
+      "url": "https://kaspi.kz/shop/p/be-quiet-straight-power-11-platinum-850w-101288826/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h5d/h19/64348649357342.jpg?format=preview-large"
+    },
+    {
+      "title": "Razer Strider L 450x400x3 черный",
+      "price": "15950",
+      "url": "https://kaspi.kz/shop/p/razer-strider-l-450x400x3-chernyi-104005024/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/heb/h1b/64786327994398.jpg?format=preview-large"
+    },
+    {
+      "title": "Видеорегистратор SilverStone F1 Hybrid S-BOT Pro черный",
+      "price": "116990",
+      "url": "https://kaspi.kz/shop/p/videoregistrator-silverstone-f1-hybrid-s-bot-pro-chernyi-101734249/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Razer DeathAdder Essential RZ01-03850200-R3M1 белый",
+      "price": "13320",
+      "url": "https://kaspi.kz/shop/p/razer-deathadder-essential-rz01-03850200-r3m1-belyi-102016622/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "FSP Group Hydro G PRO HG2-850 GEN5 850 Вт",
+      "price": "69925",
+      "url": "https://kaspi.kz/shop/p/fsp-group-hydro-g-pro-hg2-850-gen5-850-vt-115508504/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7d/h8a/84756493041694.jpg?format=preview-large"
+    },
+    {
+      "title": "FSP Group Hydro G PRO HG2-750 750 Вт",
+      "price": "60942",
+      "url": "https://kaspi.kz/shop/p/fsp-group-hydro-g-pro-hg2-750-750-vt-115495830/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h9f/h99/84754562875422.jpg?format=preview-large"
+    },
+    {
+      "title": "Hyper K68 черный",
+      "price": "9999",
+      "url": "https://kaspi.kz/shop/p/hyper-k68-chernyi-112769311/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Hyper K68 черный",
+      "price": "9999",
+      "url": "https://kaspi.kz/shop/p/hyper-k68-chernyi-112769311/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4a/h7f/83057035935774.jpg?format=preview-large"
+    },
+    {
+      "title": "Chieftec Proton BDF-850C 850W",
+      "price": "53739",
+      "url": "https://kaspi.kz/shop/p/chieftec-proton-bdf-850c-850w-9700292/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd6/h3f/63802893959198.jpg?format=preview-large"
+    },
+    {
+      "title": "Chieftronic Powerup GPX-750FC 750W",
+      "price": "46500",
+      "url": "https://kaspi.kz/shop/p/chieftronic-powerup-gpx-750fc-750w-101701099/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb5/h5c/64057114296350.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair Vengeance LPX CMK16GX4M2Z3200C16 2x8Gb",
+      "price": "26465",
+      "url": "https://kaspi.kz/shop/p/corsair-vengeance-lpx-cmk16gx4m2z3200c16-2x8gb-102520499/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/hf7/64147972489246.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair Vengeance LPX CMK16GX4M2Z3200C16 2x8Gb",
+      "price": "26465",
+      "url": "https://kaspi.kz/shop/p/corsair-vengeance-lpx-cmk16gx4m2z3200c16-2x8gb-102520499/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/hf7/64147972489246.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair Vengeance RGB Pro CMH16GX4M2E3200C16 2x8GB",
+      "price": "28968",
+      "url": "https://kaspi.kz/shop/p/corsair-vengeance-rgb-pro-cmh16gx4m2e3200c16-2x8gb-102510075/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h74/h7a/64144843800606.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair Vengeance RGB Pro CMW32GX4M2Z3600C18 2x16GB",
+      "price": "58010",
+      "url": "https://kaspi.kz/shop/p/corsair-vengeance-rgb-pro-cmw32gx4m2z3600c18-2x16gb-102517617/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Corsair Dominator Platinum RGB CMT16GX4M2C3600C18 2x8GB",
+      "price": "50000",
+      "url": "https://kaspi.kz/shop/p/corsair-dominator-platinum-rgb-cmt16gx4m2c3600c18-2x8gb-102517516/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/ha4/hfe/64093612146718.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair Dominator Platinum RGB CMT16GX4M2C3200C16 16 GB",
+      "price": "50000",
+      "url": "https://kaspi.kz/shop/p/corsair-dominator-platinum-rgb-cmt16gx4m2c3200c16-16-gb-101069556/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7b/hb0/64238831599646.jpg?format=preview-large"
+    },
+    {
+      "title": "G.SKILL Ripjaws V F4-3200C16D-16GVGB 16Gb",
+      "price": "21281",
+      "url": "https://kaspi.kz/shop/p/g-skill-ripjaws-v-f4-3200c16d-16gvgb-16gb-100158247/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h89/h00/63824850747422.jpg?format=preview-large"
+    },
+    {
+      "title": "G.SKILL Ripjaws V F4-3200C16D-16GVGB 16Gb",
+      "price": "21281",
+      "url": "https://kaspi.kz/shop/p/g-skill-ripjaws-v-f4-3200c16d-16gvgb-16gb-100158247/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h89/h00/63824850747422.jpg?format=preview-large"
+    },
+    {
+      "title": "G.SKILL Trident Z RGB F4-3200C16D-16GTZR 2x8Gb",
+      "price": "28500",
+      "url": "https://kaspi.kz/shop/p/g-skill-trident-z-rgb-f4-3200c16d-16gtzr-2x8gb-100549934/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/ha5/h6c/64041841393694.jpg?format=preview-large"
+    },
+    {
+      "title": "G.SKILL Trident Z RGB F4-3200C16D-32GTZRX 2x16Gb",
+      "price": "57355",
+      "url": "https://kaspi.kz/shop/p/g-skill-trident-z-rgb-f4-3200c16d-32gtzrx-2x16gb-100358724/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h2f/h56/63751379648542.jpg?format=preview-large"
+    },
+    {
+      "title": "G.SKILL Trident Z RGB F4-3200C16D-16GTZR 2x8Gb",
+      "price": "28500",
+      "url": "https://kaspi.kz/shop/p/g-skill-trident-z-rgb-f4-3200c16d-16gtzr-2x8gb-100549934/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "G.SKILL Trident Z Neo F4-3200C16D-64GTZN 2x32GB",
+      "price": "84886",
+      "url": "https://kaspi.kz/shop/p/g-skill-trident-z-neo-f4-3200c16d-64gtzn-2x32gb-101571521/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hc2/h29/64080060579870.jpg?format=preview-large"
+    },
+    {
+      "title": "Kingston Fury Beast RGB KF436C17BBAK2/16 2x8Gb",
+      "price": "26724",
+      "url": "https://kaspi.kz/shop/p/kingston-fury-beast-rgb-kf436c17bbak2-16-2x8gb-103232739/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h17/hd2/63925967487006.jpg?format=preview-large"
+    },
+    {
+      "title": "Kingston Fury Beast KF426C16BB/32 32GB",
+      "price": "38990",
+      "url": "https://kaspi.kz/shop/p/kingston-fury-beast-kf426c16bb-32-32gb-102895353/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h0c/hb7/64196175003678.jpg?format=preview-large"
+    },
+    {
+      "title": "Kingston HyperX Predator RGB HX440C19PB4AK2/16 16 Гб",
+      "price": "96000",
+      "url": "https://kaspi.kz/shop/p/kingston-hyperx-predator-rgb-hx440c19pb4ak2-16-16-gb-101610437/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Kingston HyperX Predator RGB HX440C19PB4AK2/16 16 Гб",
+      "price": "96000",
+      "url": "https://kaspi.kz/shop/p/kingston-hyperx-predator-rgb-hx440c19pb4ak2-16-16-gb-101610437/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Crucial Ballistix BL16G26C16U4B 16Gb",
+      "price": "46540",
+      "url": "https://kaspi.kz/shop/p/crucial-ballistix-bl16g26c16u4b-16gb-101002134/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/h43/64096720650270.jpg?format=preview-large"
+    },
+    {
+      "title": "Crucial Ballistix BL16G26C16U4B 16Gb",
+      "price": "46540",
+      "url": "https://kaspi.kz/shop/p/crucial-ballistix-bl16g26c16u4b-16gb-101002134/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/h43/64096720650270.jpg?format=preview-large"
+    },
+    {
+      "title": "Crucial Ballistix BL16G26C16U4B 16Gb",
+      "price": "46540",
+      "url": "https://kaspi.kz/shop/p/crucial-ballistix-bl16g26c16u4b-16gb-101002134/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/h43/64096720650270.jpg?format=preview-large"
+    },
+    {
+      "title": "Crucial Ballistix BL16G26C16U4B 16Gb",
+      "price": "46540",
+      "url": "https://kaspi.kz/shop/p/crucial-ballistix-bl16g26c16u4b-16gb-101002134/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/h43/64096720650270.jpg?format=preview-large"
+    },
+    {
+      "title": "Team Group T-Force Delta TF3D432G3200HC16FDC01 2x16GB",
+      "price": "46973",
+      "url": "https://kaspi.kz/shop/p/team-group-t-force-delta-tf3d432g3200hc16fdc01-2x16gb-101222858/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd2/ha6/64208427810846.jpg?format=preview-large"
+    },
+    {
+      "title": "Team Group T-Force Delta TF3D432G3200HC16FDC01 2x16GB",
+      "price": "46973",
+      "url": "https://kaspi.kz/shop/p/team-group-t-force-delta-tf3d432g3200hc16fdc01-2x16gb-101222858/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "MCPoint DDR4 8GB 3200MHZ 8 Гб",
+      "price": "8200",
+      "url": "https://kaspi.kz/shop/p/mcpoint-ddr4-8gb-3200mhz-8-gb-109331673/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h73/h97/70025293332510.jpg?format=preview-large"
+    },
+    {
+      "title": "Team Group T-Force Delta TF3D432G3200HC16FDC01 2x16GB",
+      "price": "46973",
+      "url": "https://kaspi.kz/shop/p/team-group-t-force-delta-tf3d432g3200hc16fdc01-2x16gb-101222858/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Patriot Viper Steel DDR4 PC-24000 16Gb",
+      "price": "39684",
+      "url": "https://kaspi.kz/shop/p/patriot-viper-steel-ddr4-pc-24000-16gb-6600967/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Patriot Viper Steel DDR4 PC-25600 32Gb",
+      "price": "44775",
+      "url": "https://kaspi.kz/shop/p/patriot-viper-steel-ddr4-pc-25600-32gb-100350720/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h84/h37/63752714092574.jpg?format=preview-large"
+    },
+    {
+      "title": "Patriot Viper Steel DDR4 PVS416G320C6 16Gb",
+      "price": "21558",
+      "url": "https://kaspi.kz/shop/p/patriot-viper-steel-ddr4-pvs416g320c6-16gb-100898562/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h9f/h97/64158318133278.jpg?format=preview-large"
+    },
+    {
+      "title": "Patriot Viper 4 Blackout PVB432G320C6K 2x16Gb",
+      "price": "39603",
+      "url": "https://kaspi.kz/shop/p/patriot-viper-4-blackout-pvb432g320c6k-2x16gb-102521267/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ADATA XPG Spectrix D41 RGB AX4U320038G16A-DT41 16Gb BOX",
+      "price": "48900",
+      "url": "https://kaspi.kz/shop/p/adata-xpg-spectrix-d41-rgb-ax4u320038g16a-dt41-16gb-box-100079379/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4b/h1a/63836617867294.jpg?format=preview-large"
+    },
+    {
+      "title": "ADATA XPG Spectrix D41 RGB AX4U320038G16A-DT41 16Gb BOX",
+      "price": "48900",
+      "url": "https://kaspi.kz/shop/p/adata-xpg-spectrix-d41-rgb-ax4u320038g16a-dt41-16gb-box-100079379/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4b/h1a/63836617867294.jpg?format=preview-large"
+    },
+    {
+      "title": "ADATA XPG Spectrix D41 RGB AX4U320038G16A-DT41 16Gb BOX",
+      "price": "48900",
+      "url": "https://kaspi.kz/shop/p/adata-xpg-spectrix-d41-rgb-ax4u320038g16a-dt41-16gb-box-100079379/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4b/h1a/63836617867294.jpg?format=preview-large"
+    },
+    {
+      "title": "ADATA XPG Spectrix D41 RGB AX4U320038G16A-DT41 16Gb BOX",
+      "price": "48900",
+      "url": "https://kaspi.kz/shop/p/adata-xpg-spectrix-d41-rgb-ax4u320038g16a-dt41-16gb-box-100079379/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4b/h1a/63836617867294.jpg?format=preview-large"
+    },
+    {
+      "title": "MCPoint DDR4 8GB 3200MHZ 8 Гб",
+      "price": "8200",
+      "url": "https://kaspi.kz/shop/p/mcpoint-ddr4-8gb-3200mhz-8-gb-109331673/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h73/h97/70025293332510.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
+      "price": "21762",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
+      "price": "21762",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h85/h38/64175204368414.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil EVO X II RGB GEXSB432GB3200C16ADC 2x16Gb",
+      "price": "42571",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-gexsb432gb3200c16adc-2x16gb-100320656/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h70/hd5/63930565427230.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
+      "price": "21762",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h85/h38/64175204368414.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil EVO X II RGB GEXSB432GB3200C16ADC 2x16Gb",
+      "price": "42571",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-gexsb432gb3200c16adc-2x16gb-100320656/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h70/hd5/63930565427230.jpg?format=preview-large"
+    },
+    {
+      "title": "Silicon Power DDR4 8Gb SP008GBLFU240B02 OEM",
+      "price": "16999",
+      "url": "https://kaspi.kz/shop/p/silicon-power-ddr4-8gb-sp008gblfu240b02-oem-6600607/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hfa/h29/63777428602910.jpg?format=preview-large"
+    },
+    {
+      "title": "Silicon Power DDR4 8Gb SP008GBLFU240B02 OEM",
+      "price": "16999",
+      "url": "https://kaspi.kz/shop/p/silicon-power-ddr4-8gb-sp008gblfu240b02-oem-6600607/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
+      "price": "21762",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h85/h38/64175204368414.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil EVO X II RGB GEXSB432GB3200C16ADC 2x16Gb",
+      "price": "42571",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-gexsb432gb3200c16adc-2x16gb-100320656/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h70/hd5/63930565427230.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
+      "price": "21762",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h85/h38/64175204368414.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake V200 TG RGB черный",
+      "price": "30990",
+      "url": "https://kaspi.kz/shop/p/thermaltake-v200-tg-rgb-chernyi-9800571/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
+      "price": "21762",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h85/h38/64175204368414.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil EVO X II RGB GEXSB432GB3200C16ADC 2x16Gb",
+      "price": "42571",
+      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-gexsb432gb3200c16adc-2x16gb-100320656/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Cooler Master Hyper 212 Spectrum",
+      "price": "17030",
+      "url": "https://kaspi.kz/shop/p/cooler-master-hyper-212-spectrum-101389563/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Cooler Master Hyper 212 RGB Black Edition",
+      "price": "26085",
+      "url": "https://kaspi.kz/shop/p/cooler-master-hyper-212-rgb-black-edition-30900153/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h31/h43/63816902770718.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MasterLiquid ML240R RGB",
+      "price": "64299",
+      "url": "https://kaspi.kz/shop/p/cooler-master-masterliquid-ml240r-rgb-30900534/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h1f/hc6/63816790278174.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MasterAir MA410P",
+      "price": "19900",
+      "url": "https://kaspi.kz/shop/p/cooler-master-masterair-ma410p-30900604/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h2b/hc0/63781162123294.jpg?format=preview-large"
+    },
+    {
+      "title": "Noctua NH-D15",
+      "price": "68489",
+      "url": "https://kaspi.kz/shop/p/noctua-nh-d15-30900017/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8c/h2d/63817110061086.jpg?format=preview-large"
+    },
+    {
+      "title": "Noctua NH-D15",
+      "price": "68489",
+      "url": "https://kaspi.kz/shop/p/noctua-nh-d15-30900017/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8c/h2d/63817110061086.jpg?format=preview-large"
+    },
+    {
+      "title": "Noctua NH-D15",
+      "price": "68489",
+      "url": "https://kaspi.kz/shop/p/noctua-nh-d15-30900017/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8c/h2d/63817110061086.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair iCUE H100i RGB PRO XT",
+      "price": "160000",
+      "url": "https://kaspi.kz/shop/p/corsair-icue-h100i-rgb-pro-xt-100286979/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/ha2/hc2/63905832009758.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair iCUE H115i RGB Pro XT",
+      "price": "119997",
+      "url": "https://kaspi.kz/shop/p/corsair-icue-h115i-rgb-pro-xt-100842742/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Lador Hydro LPP Treatment маска 150 мл",
+      "price": "1772",
+      "url": "https://kaspi.kz/shop/p/lador-hydro-lpp-treatment-maska-150-ml-100366529/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8b/h3c/63862165667870.jpg?format=preview-large"
+    },
+    {
+      "title": "Lador Hydro LPP Treatment маска 500 мл",
+      "price": "3674",
+      "url": "https://kaspi.kz/shop/p/lador-hydro-lpp-treatment-maska-500-ml-107709958/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb0/hc5/66107864940574.jpg?format=preview-large"
+    },
+    {
+      "title": "NZXT Kraken X63 RGB RL-KRX63-RW",
+      "price": "153644",
+      "url": "https://kaspi.kz/shop/p/nzxt-kraken-x63-rgb-rl-krx63-rw-116990331/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h5f/h57/85281363853342.jpg?format=preview-large"
+    },
+    {
+      "title": "NZXT Kraken 360",
+      "price": "135000",
+      "url": "https://kaspi.kz/shop/p/nzxt-kraken-360-116510671/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "NZXT Kraken Elite 280 RGB",
+      "price": "179633",
+      "url": "https://kaspi.kz/shop/p/nzxt-kraken-elite-280-rgb-110567442/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Bequiet! Dark Rock PRO 4",
+      "price": "49143",
+      "url": "https://kaspi.kz/shop/p/bequiet-dark-rock-pro-4-103221303/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Bequiet! Dark Rock PRO 4",
+      "price": "49143",
+      "url": "https://kaspi.kz/shop/p/bequiet-dark-rock-pro-4-103221303/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Be quiet Pure Rock 2",
+      "price": "22511",
+      "url": "https://kaspi.kz/shop/p/be-quiet-pure-rock-2-103222617/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hab/haf/64178466619422.jpg?format=preview-large"
+    },
+    {
+      "title": "Arctic Freezer 34 eSports DUO Red ACFRE00060A",
+      "price": "45864",
+      "url": "https://kaspi.kz/shop/p/arctic-freezer-34-esports-duo-red-acfre00060a-102417215/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8a/h69/63944658223134.jpg?format=preview-large"
+    },
+    {
+      "title": "Arctic Liquid Freezer II-240",
+      "price": "50990",
+      "url": "https://kaspi.kz/shop/p/arctic-liquid-freezer-ii-240-108993552/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h74/hca/69248905543710.jpg?format=preview-large"
+    },
+    {
+      "title": "Arctic Liquid Freezer II-240",
+      "price": "50990",
+      "url": "https://kaspi.kz/shop/p/arctic-liquid-freezer-ii-240-108993552/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Thermaltake Floe Riing RGB 240 TT Premium Edition",
+      "price": "61895",
+      "url": "https://kaspi.kz/shop/p/thermaltake-floe-riing-rgb-240-tt-premium-edition-30900698/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h5c/hf6/63817497608222.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake UX100 ARGB Lighting",
+      "price": "6960",
+      "url": "https://kaspi.kz/shop/p/thermaltake-ux100-argb-lighting-30901165/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6b/h30/63830722445342.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake TH240 ARGB Sync",
+      "price": "43680",
+      "url": "https://kaspi.kz/shop/p/thermaltake-th240-argb-sync-100475222/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb1/h5a/64006011158558.jpg?format=preview-large"
+    },
+    {
+      "title": "DeepCool Gammaxx 400 EX",
+      "price": "16287",
+      "url": "https://kaspi.kz/shop/p/deepcool-gammaxx-400-ex-100475287/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h22/ha0/63916657344542.jpg?format=preview-large"
+    },
+    {
+      "title": "DeepCool Gammaxx 400 EX",
+      "price": "16287",
+      "url": "https://kaspi.kz/shop/p/deepcool-gammaxx-400-ex-100475287/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h22/ha0/63916657344542.jpg?format=preview-large"
+    },
+    {
+      "title": "Deepcool CK-11508",
+      "price": "1600",
+      "url": "https://kaspi.kz/shop/p/deepcool-ck-11508-30900031/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "DeepCool AS500 R-AS500-BKNLMN-G",
+      "price": "30117",
+      "url": "https://kaspi.kz/shop/p/deepcool-as500-r-as500-bknlmn-g-100842847/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6a/h2f/63941038997534.jpg?format=preview-large"
+    },
+    {
+      "title": "ID-COOLING SE-224-XT Basic",
+      "price": "10161",
+      "url": "https://kaspi.kz/shop/p/id-cooling-se-224-xt-basic-108087891/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf4/h3b/66986681925662.jpg?format=preview-large"
+    },
+    {
+      "title": "ID-COOLING AURAFLOW X 240 EVO",
+      "price": "26990",
+      "url": "https://kaspi.kz/shop/p/id-cooling-auraflow-x-240-evo-106533014/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h53/h81/86359761027102.jpg?format=preview-large"
+    },
+    {
+      "title": "ID-COOLING SE-207-XT",
+      "price": "26094",
+      "url": "https://kaspi.kz/shop/p/id-cooling-se-207-xt-120584203/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hde/h08/86321937252382.jpg?format=preview-large"
+    },
+    {
+      "title": "LIAN LI Galahad AIO 240 UNI FAN SL120 Edition",
+      "price": "150000",
+      "url": "https://kaspi.kz/shop/p/lian-li-galahad-aio-240-uni-fan-sl120-edition-120133382/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h19/h48/86212946264094.jpg?format=preview-large"
+    },
+    {
+      "title": "LIAN LI Galahad AIO 360 G89.GA360B.01",
+      "price": "84290",
+      "url": "https://kaspi.kz/shop/p/lian-li-galahad-aio-360-g89-ga360b-01-107659840/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h52/h45/65973626208286.jpg?format=preview-large"
+    },
+    {
+      "title": "Zalman CNPS10X Performa",
+      "price": "18890",
+      "url": "https://kaspi.kz/shop/p/zalman-cnps10x-performa-30900549/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he4/h99/63816815968286.jpg?format=preview-large"
+    },
+    {
+      "title": "Zalman N4 черный",
+      "price": "22990",
+      "url": "https://kaspi.kz/shop/p/zalman-n4-chernyi-101404603/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6a/h9e/63974080086046.jpg?format=preview-large"
+    },
+    {
+      "title": "Zalman CNPS4X",
+      "price": "7379",
+      "url": "https://kaspi.kz/shop/p/zalman-cnps4x-116859051/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Vetro 14 дюйм 2024 26 дюймов черный",
+      "price": "124226",
+      "url": "https://kaspi.kz/shop/p/vetro-14-djuim-2024-26-djuimov-chernyi-118985881/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Cooler Master MasterAir MA620P",
+      "price": "45190",
+      "url": "https://kaspi.kz/shop/p/cooler-master-masterair-ma620p-30900488/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h46/hc8/63817328263198.jpg?format=preview-large"
+    },
+    {
+      "title": "Noctua NF-A12x15 PWM",
+      "price": "25000",
+      "url": "https://kaspi.kz/shop/p/noctua-nf-a12x15-pwm-30900639/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb9/h45/63817759555614.jpg?format=preview-large"
+    },
+    {
+      "title": "Noctua NF-A20 PWM",
+      "price": "50000",
+      "url": "https://kaspi.kz/shop/p/noctua-nf-a20-pwm-30900138/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h9b/h42/63817913565214.jpg?format=preview-large"
+    },
+    {
+      "title": "Noctua NF-A20 PWM",
+      "price": "50000",
+      "url": "https://kaspi.kz/shop/p/noctua-nf-a20-pwm-30900138/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h9b/h42/63817913565214.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair ML120 PRO RGB LED 3 Fan Pack",
+      "price": "44599",
+      "url": "https://kaspi.kz/shop/p/corsair-ml120-pro-rgb-led-3-fan-pack-30900516/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h68/hb6/63818257530910.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair LL140 RGB",
+      "price": "15291",
+      "url": "https://kaspi.kz/shop/p/corsair-ll140-rgb-114087878/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd9/h7f/84355471147038.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair AF120 Elite CO-9050142-WW",
+      "price": "6801",
+      "url": "https://kaspi.kz/shop/p/corsair-af120-elite-co-9050142-ww-114179354/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/haa/hff/84390863208478.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair AR120 RGB CO-9050167-WW",
+      "price": "54499",
+      "url": "https://kaspi.kz/shop/p/corsair-ar120-rgb-co-9050167-ww-114177144/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Corsair LL120 RGB CO-9050072-WW",
+      "price": "40709",
+      "url": "https://kaspi.kz/shop/p/corsair-ll120-rgb-co-9050072-ww-113948918/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h5e/hcc/84209446846494.jpg?format=preview-large"
+    },
+    {
+      "title": "Be quiet Silent Wings 4 PWM",
+      "price": "12424",
+      "url": "https://kaspi.kz/shop/p/be-quiet-silent-wings-4-pwm-114938696/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "be quiet! Pure Wings 2 (BL083)",
+      "price": "5945",
+      "url": "https://kaspi.kz/shop/p/be-quiet-pure-wings-2-bl083--101389243/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3d/h52/63817490530334.jpg?format=preview-large"
+    },
+    {
+      "title": "Bequiet! Light Wings 120mm PWM ARGB",
+      "price": "12312",
+      "url": "https://kaspi.kz/shop/p/bequiet-light-wings-120mm-pwm-argb-104141292/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/ha2/h8f/64460213092382.jpg?format=preview-large"
+    },
+    {
+      "title": "Arctic P12 PWM",
+      "price": "12500",
+      "url": "https://kaspi.kz/shop/p/arctic-p12-pwm-109463076/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/h02/70308144742430.jpg?format=preview-large"
+    },
+    {
+      "title": "Arctic BioniX F120 ACFAN00093A",
+      "price": "6480",
+      "url": "https://kaspi.kz/shop/p/arctic-bionix-f120-acfan00093a-116212319/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hce/h46/85012693123102.png?format=preview-large"
+    },
+    {
+      "title": "Arctic P14 PWM PST CO",
+      "price": "6990",
+      "url": "https://kaspi.kz/shop/p/arctic-p14-pwm-pst-co-30900386/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h45/hfb/63818013114398.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Riing 12 LED RGB",
+      "price": "15870",
+      "url": "https://kaspi.kz/shop/p/thermaltake-riing-12-led-rgb-30900708/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Thermaltake Pure 20 ARGB Sync",
+      "price": "19538",
+      "url": "https://kaspi.kz/shop/p/thermaltake-pure-20-argb-sync-104441136/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Thermaltake Toughfan 14 Radiator Fan CL-F118-PL14BL-A",
+      "price": "8999",
+      "url": "https://kaspi.kz/shop/p/thermaltake-toughfan-14-radiator-fan-cl-f118-pl14bl-a-109659162/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h54/h62/79580105834526.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MasterFan MF120R ARGB",
+      "price": "21694",
+      "url": "https://kaspi.kz/shop/p/cooler-master-masterfan-mf120r-argb-30900373/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/haa/63818036379678.jpg?format=preview-large"
+    },
+    {
+      "title": "2E F120-SN",
+      "price": "1670",
+      "url": "https://kaspi.kz/shop/p/2e-f120-sn-119242659/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb1/h8a/85980636315678.jpg?format=preview-large"
+    },
+    {
+      "title": "Deepcool RF120B",
+      "price": "2195",
+      "url": "https://kaspi.kz/shop/p/deepcool-rf120b-100104999/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb8/h9d/63859398377502.jpg?format=preview-large"
+    },
+    {
+      "title": "Deepcool CF120 Plus",
+      "price": "23890",
+      "url": "https://kaspi.kz/shop/p/deepcool-cf120-plus-101204324/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb9/h33/64208332750878.jpg?format=preview-large"
+    },
+    {
+      "title": "DeepCool MF120S RGB",
+      "price": "29760",
+      "url": "https://kaspi.kz/shop/p/deepcool-mf120s-rgb-100438268/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7a/h88/64027937308702.jpg?format=preview-large"
+    },
+    {
+      "title": "Phanteks PH-F120T30_BG_3P",
+      "price": "49990",
+      "url": "https://kaspi.kz/shop/p/phanteks-ph-f120t30-bg-3p-115123349/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Scythe Kaze Hachi",
+      "price": "4990",
+      "url": "https://kaspi.kz/shop/p/scythe-kaze-hachi-112481788/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h38/hf2/82763217960990.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermalright TY-147A SQ",
+      "price": "9000",
+      "url": "https://kaspi.kz/shop/p/thermalright-ty-147a-sq-30900958/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd1/hfe/63817002156062.jpg?format=preview-large"
+    },
+    {
+      "title": "LIAN LI UNI FAN SL V2 SL120V2-1B",
+      "price": "14490",
+      "url": "https://kaspi.kz/shop/p/lian-li-uni-fan-sl-v2-sl120v2-1b-113582502/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Ariston ABS BLU EVO RS 30",
+      "price": "63780",
+      "url": "https://kaspi.kz/shop/p/ariston-abs-blu-evo-rs-30-3900686/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Moonstar HF-5091 черный",
+      "price": "57993",
+      "url": "https://kaspi.kz/shop/p/moonstar-hf-5091-chernyi-109350761/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "COUGAR Duoface Pro RGB CGR-5AD1W-RGB белый",
+      "price": "47485",
+      "url": "https://kaspi.kz/shop/p/cougar-duoface-pro-rgb-cgr-5ad1w-rgb-belyi-116053824/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3d/hb9/84965961531422.jpg?format=preview-large"
+    },
+    {
+      "title": "ID-COOLING SE-214-XT ARGB",
+      "price": "8054",
+      "url": "https://kaspi.kz/shop/p/id-cooling-se-214-xt-argb-106656393/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h98/hf2/64371651280926.jpg?format=preview-large"
+    },
+    {
+      "title": "AeroCool FP1-120 ARGB PWM",
+      "price": "3825",
+      "url": "https://kaspi.kz/shop/p/aerocool-fp1-120-argb-pwm-115015801/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "PCcooler C3 D510 ARGB WH белый",
+      "price": "28250",
+      "url": "https://kaspi.kz/shop/p/pccooler-c3-d510-argb-wh-belyi-114888026/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Antec Prizm 120 ARGB черный",
+      "price": "6417",
+      "url": "https://kaspi.kz/shop/p/antec-prizm-120-argb-chernyi-100668786/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf5/hb4/64081154474014.jpg?format=preview-large"
+    },
+    {
+      "title": "NZXT CA-H510i-BR черный",
+      "price": "100000",
+      "url": "https://kaspi.kz/shop/p/nzxt-ca-h510i-br-chernyi-105319210/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hac/hfc/65096281653278.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock H510M-HDV R2.0",
+      "price": "33992",
+      "url": "https://kaspi.kz/shop/p/asrock-h510m-hdv-r2-0-104544864/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hcf/hdb/86548235878430.jpg?format=preview-large"
+    },
+    {
+      "title": "NZXT H7 Flow белый",
+      "price": "94000",
+      "url": "https://kaspi.kz/shop/p/nzxt-h7-flow-belyi-109961446/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Corsair 4000D Airflow черный",
+      "price": "47949",
+      "url": "https://kaspi.kz/shop/p/corsair-4000d-airflow-chernyi-102105272/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd7/hf6/64042705485854.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair 5000D Airflow черный",
+      "price": "79284",
+      "url": "https://kaspi.kz/shop/p/corsair-5000d-airflow-chernyi-114850889/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hbf/h65/84573338271774.jpg?format=preview-large"
+    },
+    {
+      "title": "Corsair HS80 RGB черный",
+      "price": "48115",
+      "url": "https://kaspi.kz/shop/p/corsair-hs80-rgb-chernyi-110451114/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Cooler Master MasterBox Q300L черный",
+      "price": "26001",
+      "url": "https://kaspi.kz/shop/p/cooler-master-masterbox-q300l-chernyi-100036122/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he0/h68/63819012603934.jpg?format=preview-large"
+    },
+    {
+      "title": "ENTECO Master 1400 ШС белый",
+      "price": "747110",
+      "url": "https://kaspi.kz/shop/p/enteco-master-1400-shs-belyi-112324466/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h94/h51/82502333169694.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master MasterCase H500P Mesh ARGB белый",
+      "price": "108870",
+      "url": "https://kaspi.kz/shop/p/cooler-master-mastercase-h500p-mesh-argb-belyi-106126494/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf6/h07/64355078635550.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master COSMOS C700M белый",
+      "price": "336247",
+      "url": "https://kaspi.kz/shop/p/cooler-master-cosmos-c700m-belyi-116144148/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h0c/haf/84993674018846.png?format=preview-large"
+    },
+    {
+      "title": "Корпус Lian Li PC-O11 Dynamic, White",
+      "price": "190990",
+      "url": "https://kaspi.kz/shop/p/korpus-lian-li-pc-o11-dynamic-white-109970291/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4a/h20/80255507693598.jpg?format=preview-large"
+    },
+    {
+      "title": "LIAN LI Lancool 205 Mesh CW G99.OE764CW.00 белый",
+      "price": "47142",
+      "url": "https://kaspi.kz/shop/p/lian-li-lancool-205-mesh-cw-g99-oe764cw-00-belyi-107659664/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h05/hd3/65972788133918.jpg?format=preview-large"
+    },
+    {
+      "title": "LIAN LI Lancool 215 W G99.LAN215W.00 белый",
+      "price": "45900",
+      "url": "https://kaspi.kz/shop/p/lian-li-lancool-215-w-g99-lan215w-00-belyi-107659835/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hae/h74/65973461614622.jpg?format=preview-large"
+    },
+    {
+      "title": "Bequiet! Dark Base Pro 900 rev.2 черный",
+      "price": "200000",
+      "url": "https://kaspi.kz/shop/p/bequiet-dark-base-pro-900-rev-2-chernyi-103764556/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h12/he1/64393330065438.jpg?format=preview-large"
+    },
+    {
+      "title": "be quiet! Pure Base 500DX белый",
+      "price": "61394",
+      "url": "https://kaspi.kz/shop/p/be-quiet-pure-base-500dx-belyi-101362516/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h22/h87/64577552089118.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Core P3 TG Pro черный",
+      "price": "63907",
+      "url": "https://kaspi.kz/shop/p/thermaltake-core-p3-tg-pro-chernyi-117353235/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hbe/h39/85409958592542.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Level 20 MT ARGB CA-1M7-00M1WN-00 черный",
+      "price": "41600",
+      "url": "https://kaspi.kz/shop/p/thermaltake-level-20-mt-argb-ca-1m7-00m1wn-00-chernyi-9800624/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3c/h8a/63831005560862.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake View 71 TG Snow Edition белый",
+      "price": "106990",
+      "url": "https://kaspi.kz/shop/p/thermaltake-view-71-tg-snow-edition-belyi-112103012/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Antec NX290 NX290AV75 черный",
+      "price": "41369",
+      "url": "https://kaspi.kz/shop/p/antec-nx290-nx290av75-chernyi-112595980/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Antec AX20 черный",
+      "price": "37613",
+      "url": "https://kaspi.kz/shop/p/antec-ax20-chernyi-112452369/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8b/hc0/82728798781470.jpg?format=preview-large"
+    },
+    {
+      "title": "Deepcool Matrexx 55 V3 ADD-RGB WH 3F белый",
+      "price": "40900",
+      "url": "https://kaspi.kz/shop/p/deepcool-matrexx-55-v3-add-rgb-wh-3f-belyi-100055911/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd2/h33/63799509221406.jpg?format=preview-large"
+    },
+    {
+      "title": "Deepcool CL500 черный",
+      "price": "47600",
+      "url": "https://kaspi.kz/shop/p/deepcool-cl500-chernyi-100723025/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/ha7/h6c/63952055926814.jpg?format=preview-large"
+    },
+    {
+      "title": "Deepcool Macube 310P черный",
+      "price": "44900",
+      "url": "https://kaspi.kz/shop/p/deepcool-macube-310p-chernyi-100026959/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h1a/h55/63842444148766.jpg?format=preview-large"
+    },
+    {
+      "title": "COUGAR MX360 RGB черный",
+      "price": "23585",
+      "url": "https://kaspi.kz/shop/p/cougar-mx360-rgb-chernyi-109491619/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h5e/h75/79171036577822.jpg?format=preview-large"
+    },
+    {
+      "title": "COUGAR Gemini T черный",
+      "price": "90990",
+      "url": "https://kaspi.kz/shop/p/cougar-gemini-t-chernyi-100003520/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h1a/hc5/63837444669470.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master Hyper 212 EVO V2 RR-2V2E-18PK-R2",
+      "price": "9900",
+      "url": "https://kaspi.kz/shop/p/cooler-master-hyper-212-evo-v2-rr-2v2e-18pk-r2-107668295/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h03/h49/66001901682718.jpg?format=preview-large"
+    },
+    {
+      "title": "Cooler Master Selencio S600 черный",
+      "price": "80000",
+      "url": "https://kaspi.kz/shop/p/cooler-master-selencio-s600-chernyi-100036137/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h71/h9f/63819401887774.jpg?format=preview-large"
+    },
+    {
+      "title": "Thermaltake Versa H17 черный",
+      "price": "19991",
+      "url": "https://kaspi.kz/shop/p/thermaltake-versa-h17-chernyi-9800232/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h52/h87/63775458918430.jpg?format=preview-large"
+    }
+  ]
+}

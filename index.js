@@ -51,8 +51,6 @@ app.post('/api/generate', async (req, res) => {
     console.log('Received prompt:', prompt);
     console.log('Budget:', budget);
 
-    console.log('Parsed components:', parsedComponents);
-
     const modelId = "gpt-4o-mini";
     const systemPrompt = `You are an assistant helping to build PCs with a focus on speed, affordability, and reliability.
     Make a research on the prices of the components and components themselves in Kazakhstan.

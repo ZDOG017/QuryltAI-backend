@@ -1,0 +1,80 @@
+{
+  "components": [
+    {
+      "key": "GPU",
+      "component": "NVIDIA GeForce RTX 3070"
+    },
+    {
+      "key": "Motherboard",
+      "component": "Asus TUF Gaming Z690-Plus"
+    },
+    {
+      "key": "RAM",
+      "component": "Corsair Vengeance LPX 32GB"
+    },
+    {
+      "key": "CPU Cooler",
+      "component": "be quiet! Dark Rock Pro 4"
+    },
+    {
+      "key": "FAN",
+      "component": "Arctic P12 PWM PST"
+    },
+    {
+      "key": "PC case",
+      "component": "Fractal Design Meshify C"
+    },
+    {
+      "key": "GPU",
+      "component": "NVIDIA GeForce RTX 3060 Ti"
+    },
+    {
+      "key": "RAM",
+      "component": "Corsair Vengeance LPX 32GB"
+    },
+    {
+      "key": "CPU Cooler",
+      "component": "Cooler Master Hyper 212 Black Edition"
+    },
+    {
+      "key": "FAN",
+      "component": "ARCTIC P12 PWM PST"
+    },
+    {
+      "key": "PC case",
+      "component": "Fractal Design Meshify C"
+    },
+    {
+      "key": "CPU",
+      "component": "Intel Core i5-13600K"
+    },
+    {
+      "key": "GPU",
+      "component": "MSI GeForce RTX 4070 GAMING X"
+    },
+    {
+      "key": "Motherboard",
+      "component": "Asus ROG Strix Z790-E Gaming WiFi"
+    },
+    {
+      "key": "RAM",
+      "component": "Corsair Vengeance LPX 32GB (2 x 16GB) DDR5"
+    },
+    {
+      "key": "PSU",
+      "component": "Seasonic FOCUS GX-850, 850W"
+    },
+    {
+      "key": "CPU Cooler",
+      "component": "Noctua NH-U12S redux"
+    },
+    {
+      "key": "FAN",
+      "component": "Cooler Master SickleFlow 120 V2"
+    },
+    {
+      "key": "PC case",
+      "component": "Lian Li LANCOOL II MESH"
+    }
+  ]
+}

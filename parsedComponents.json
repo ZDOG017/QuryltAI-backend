@@ -1,10 +1,10 @@
 {
   "components": [
     {
-      "title": "NVIDIA GeForce RTX 4090 24 Гб",
-      "price": "2140496",
-      "url": "https://kaspi.kz/shop/p/nvidia-geforce-rtx-4090-24-gb-112551502/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8c/hc9/82828264144926.jpg?format=preview-large"
+      "title": "GIGABYTE GeForce RTX 4090 Windforce V2 GV-N4090WF3V2-24GD 24 Гб",
+      "price": "1159990",
+      "url": "https://kaspi.kz/shop/p/gigabyte-geforce-rtx-4090-windforce-v2-gv-n4090wf3v2-24gd-24-gb-112322133/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h71/h08/82499228729374.jpg?format=preview-large"
     },
     {
       "title": "MSI GeForce RTX 4080 SUPER VENTUS 3X OC 16 Гб",
@@ -1075,18 +1075,6 @@
       "image": "https://resources.cdn-kaspi.kz/img/m/p/heb/h1b/64786327994398.jpg?format=preview-large"
     },
     {
-      "title": "Видеорегистратор SilverStone F1 Hybrid S-BOT Pro черный",
-      "price": "116990",
-      "url": "https://kaspi.kz/shop/p/videoregistrator-silverstone-f1-hybrid-s-bot-pro-chernyi-101734249/?c=750000000",
-      "image": ""
-    },
-    {
-      "title": "Razer DeathAdder Essential RZ01-03850200-R3M1 белый",
-      "price": "13320",
-      "url": "https://kaspi.kz/shop/p/razer-deathadder-essential-rz01-03850200-r3m1-belyi-102016622/?c=750000000",
-      "image": ""
-    },
-    {
       "title": "FSP Group Hydro G PRO HG2-850 GEN5 850 Вт",
       "price": "69925",
       "url": "https://kaspi.kz/shop/p/fsp-group-hydro-g-pro-hg2-850-gen5-850-vt-115508504/?c=750000000",
@@ -1097,18 +1085,6 @@
       "price": "60942",
       "url": "https://kaspi.kz/shop/p/fsp-group-hydro-g-pro-hg2-750-750-vt-115495830/?c=750000000",
       "image": "https://resources.cdn-kaspi.kz/img/m/p/h9f/h99/84754562875422.jpg?format=preview-large"
-    },
-    {
-      "title": "Hyper K68 черный",
-      "price": "9999",
-      "url": "https://kaspi.kz/shop/p/hyper-k68-chernyi-112769311/?c=750000000",
-      "image": ""
-    },
-    {
-      "title": "Hyper K68 черный",
-      "price": "9999",
-      "url": "https://kaspi.kz/shop/p/hyper-k68-chernyi-112769311/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4a/h7f/83057035935774.jpg?format=preview-large"
     },
     {
       "title": "Chieftec Proton BDF-850C 850W",
@@ -1303,40 +1279,10 @@
       "image": "https://resources.cdn-kaspi.kz/img/m/p/h4b/h1a/63836617867294.jpg?format=preview-large"
     },
     {
-      "title": "ADATA XPG Spectrix D41 RGB AX4U320038G16A-DT41 16Gb BOX",
-      "price": "48900",
-      "url": "https://kaspi.kz/shop/p/adata-xpg-spectrix-d41-rgb-ax4u320038g16a-dt41-16gb-box-100079379/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4b/h1a/63836617867294.jpg?format=preview-large"
-    },
-    {
-      "title": "ADATA XPG Spectrix D41 RGB AX4U320038G16A-DT41 16Gb BOX",
-      "price": "48900",
-      "url": "https://kaspi.kz/shop/p/adata-xpg-spectrix-d41-rgb-ax4u320038g16a-dt41-16gb-box-100079379/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h4b/h1a/63836617867294.jpg?format=preview-large"
-    },
-    {
       "title": "MCPoint DDR4 8GB 3200MHZ 8 Гб",
       "price": "8200",
       "url": "https://kaspi.kz/shop/p/mcpoint-ddr4-8gb-3200mhz-8-gb-109331673/?c=750000000",
       "image": "https://resources.cdn-kaspi.kz/img/m/p/h73/h97/70025293332510.jpg?format=preview-large"
-    },
-    {
-      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
-      "price": "21762",
-      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
-      "image": ""
-    },
-    {
-      "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",
-      "price": "21762",
-      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-ddr4-pc4-24000-16gb-chernyi-100927512/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h85/h38/64175204368414.jpg?format=preview-large"
-    },
-    {
-      "title": "Geil EVO X II RGB GEXSB432GB3200C16ADC 2x16Gb",
-      "price": "42571",
-      "url": "https://kaspi.kz/shop/p/geil-evo-x-ii-rgb-gexsb432gb3200c16adc-2x16gb-100320656/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h70/hd5/63930565427230.jpg?format=preview-large"
     },
     {
       "title": "Geil EVO X II RGB DDR4 PC4-24000 16GB черный",

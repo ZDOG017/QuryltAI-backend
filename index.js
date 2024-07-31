@@ -45,38 +45,50 @@ const findBestMatch = (searchTerm, products) => {
   return products[bestMatchIndex] || null;
 };
 
-app.post('/api/generate', async (req, res) => {
-  try {
-    const { prompt, budget } = req.body;
-    console.log('Received prompt:', prompt);
-    console.log('Budget:', budget);
+// Function to fetch products and calculate total price
+const fetchProductsAndCalculatePrice = (components, parsedComponents) => {
+  const requiredComponents = ["CPU", "GPU", "Motherboard", "RAM", "PSU", "CPU Cooler", "FAN", "PC case"];
+  let fetchedProducts = [];
+  let currentMissingComponents = [];
+  let totalPrice = 0;
 
-    const modelId = "gpt-4o-mini";
-    const systemPrompt = `You are an assistant helping to build PCs with a focus on speed, affordability, and reliability.
-    Make a research on the prices of the components and components themselves in Kazakhstan.
-    Look up the prices strictly in KZT.
-    Suggest components that are commonly available and offer good value for money.
-    Prefer newer, widely available models over older or niche products.
-    IMPORTANT: Make a build that accurately or closely matches the desired budget of the user and DON'T comment on this. IMPORTANT: take the real-time prices of the components from kaspi.kz. 
-    IMPORTANT: Dont write anything except JSON Format. STRICTLY list only the component names in JSON format, with each component type as a key and the component name as the value. DO NOT WRITE ANYTHING EXCEPT THE JSON. The response must include exactly these components: CPU, GPU, Motherboard, RAM, PSU, CPU Cooler, FAN, PC case. Use components that are most popular in Kazakhstan's stores in July 2024. Before answering, check the prices today in Kazakhstan.
-    IMPORTANT: please dont send '''json {code} '''
-    IMPORTANT: Please choose pricier gpu and cpu. Main budget should be focused on GPU.
-    Example of the response:
-    {
-      "CPU": "AMD Ryzen 5 3600",
-      "GPU": "Gigabyte GeForce GTX 1660 SUPER OC",
-      "Motherboard": "Asus PRIME B450M-K",
-      "RAM": "Corsair Vengeance LPX 16GB",
-      "PSU": "EVGA 600 W1",
-      "CPU Cooler": "Cooler Master Hyper 212",
-      "FAN": "Noctua NF-P12",
-      "PC case": "NZXT H510"
-    }`;
+  for (const key of requiredComponents) {
+    const component = components[key];
+    const bestMatchProduct = findBestMatch(component, parsedComponents.components);
+    if (bestMatchProduct) {
+      fetchedProducts.push({ key, product: bestMatchProduct });
+    } else {
+      currentMissingComponents.push({ key, component });
+    }
+  }
 
-    const currentMessages = [
-      { role: "system", content: systemPrompt },
-      { role: "user", content: `The budget for this build is ${budget} KZT.` }
-    ];
+  // Filter out duplicates, ensure only one of each component type
+  const uniqueProducts = {};
+  for (const { key, product } of fetchedProducts) {
+    if (!uniqueProducts[key]) {
+      uniqueProducts[key] = product;
+    }
+  }
+
+  const productResponse = uniqueProducts;
+  totalPrice = Object.values(productResponse).reduce((sum, product) => sum + parseInt(product.price, 10), 0);
+
+  return { productResponse, currentMissingComponents, totalPrice };
+};
+
+const getValidBuild = async (budget, systemPrompt, modelId) => {
+  const budgetLowerLimit = budget * 0.9;
+  const budgetUpperLimit = budget * 1.1;
+  let attempts = 0;
+  const maxAttempts = 5;
+  let currentMessages = [
+    { role: "system", content: systemPrompt },
+    { role: "user", content: `The budget for this build is ${budget} KZT.` }
+  ];
+
+  while (attempts < maxAttempts) {
+    attempts += 1;
+    console.log(`Attempt ${attempts} to get a valid build`);
 
     console.log('Sending messages to OpenAI:', currentMessages);
 
@@ -91,93 +103,83 @@ app.post('/api/generate', async (req, res) => {
     let components;
     try {
       components = JSON.parse(responseText);
+      console.log('Parsed components:', components);
     } catch (error) {
-      throw new Error('Failed to parse JSON response from OpenAI');
+      console.error('Failed to parse JSON response from OpenAI:', error);
+      continue; // Try again if JSON is not valid
     }
 
-    const requiredComponents = ["CPU", "GPU", "Motherboard", "RAM", "PSU", "CPU Cooler", "FAN", "PC case"];
-    const componentKeys = Object.keys(components);
+    const { productResponse, currentMissingComponents, totalPrice } = fetchProductsAndCalculatePrice(components, parsedComponents);
 
-    if (!requiredComponents.every(comp => componentKeys.includes(comp))) {
-      throw new Error('OpenAI response is missing one or more required components');
+    console.log('Fetched products:', productResponse);
+    console.log('Missing components:', currentMissingComponents);
+    console.log('Total price:', totalPrice);
+
+    if (totalPrice >= budgetLowerLimit && totalPrice <= budgetUpperLimit && currentMissingComponents.length === 0) {
+      console.log('Valid build found');
+      return { components, productResponse, totalPrice };
     }
 
-    let fetchedProducts = [];
-    let currentMissingComponents = [];
-    let productResponse = {};
-    let totalPrice = 0;
-    let adjustedResponseText = null;
+    console.log(`Build is not valid. Total price ${totalPrice} is not within 10% of the budget (${budgetLowerLimit} - ${budgetUpperLimit}).`);
 
-    // Function to fetch products and calculate total price
-    const fetchProductsAndCalculatePrice = () => {
-      fetchedProducts = [];
-      currentMissingComponents = [];
-      for (const key of requiredComponents) {
-        const component = components[key];
-        const bestMatchProduct = findBestMatch(component, parsedComponents.components);
-        if (bestMatchProduct) {
-          fetchedProducts.push({ key, product: bestMatchProduct });
-        } else {
-          currentMissingComponents.push({ key, component });
-        }
-      }
-
-      productResponse = fetchedProducts.reduce((acc, { key, product }) => {
-        if (product) {
-          acc[key] = product;
-        }
-        return acc;
-      }, {});
-
-      totalPrice = Object.values(productResponse).reduce((sum, product) => sum + parseInt(product.price, 10), 0);
-    };
-
-    // Initial fetch and price calculation
-    fetchProductsAndCalculatePrice();
-
-    // Always perform adjustment
+    // If not valid, prepare adjustment prompt with current components and their prices
     const componentsWithPrices = Object.entries(productResponse)
       .map(([key, product]) => `${key}: ${product.title} - ${product.price} KZT`)
       .join(', ');
 
-    const adjustmentPrompt = `The current build has a total price of ${totalPrice} KZT, which may not be within 10% of the budget (${budget} KZT).
+    const adjustmentPrompt = `The current build has a total price of ${totalPrice} KZT, which is not within 10% of the budget (${budget} KZT).
     Current components and prices: ${componentsWithPrices}.
     ${currentMissingComponents.length > 0 ? `The following components were not found: ${currentMissingComponents.map(comp => comp.key).join(', ')}.` : ''}
-    Please adjust the build to be closer to the budget while maintaining performance. Suggest alternatives for any missing components.
+    Please adjust the build to be closer to the budget while maintaining performance. Prefer changing individual components rather than the entire build.
+    If the current total price is below the budget, suggest more expensive components.
+    If the current total price is above the budget, suggest cheaper components.
     STRICTLY: Provide your response in the same JSON format as before. Ensure the total cost does not exceed the budget and remains within 10% of the budget.
     Also, please ensure that all components are real PC components.`;
 
-    const adjustmentMessages = [
+    currentMessages = [
       { role: "system", content: systemPrompt },
       { role: "user", content: adjustmentPrompt }
     ];
+  }
+  throw new Error('Failed to generate a valid build within the budget and component constraints after multiple attempts.');
+};
 
-    const adjustmentResult = await openai.chat.completions.create({
-      model: modelId,
-      messages: adjustmentMessages,
-    });
+app.post('/api/generate', async (req, res) => {
+  try {
+    const { prompt, budget } = req.body;
+    console.log('Received prompt:', prompt);
+    console.log('Budget:', budget);
 
-    adjustedResponseText = adjustmentResult.choices[0].message.content;
-    console.log('Received adjusted response from OpenAI: \n', adjustedResponseText);
+    const modelId = "gpt-4o-mini";
+    const systemPrompt = `You are an assistant helping to build PCs with a focus on budget of the user and the build should be compatible with the components.
+    IMPORTANT: Use the components that are widely available in Kazakhstan. The components should be from kaspi.kz
+    IMPORTANT: Look up the prices that are in Kaspi.kz and in KZT (Tenge).
+    IMPORTANT: Make a build that accurately or closely matches the desired budget of the user and DON'T comment on this. IMPORTANT: take the real-time prices of the components from kaspi.kz. 
+    IMPORTANT: Dont write anything except JSON Format. STRICTLY list only the component names in JSON format, with each component type as a key and the component name as the value. DO NOT WRITE ANYTHING EXCEPT THE JSON. The response must include exactly these components: CPU, GPU, Motherboard, RAM, PSU, CPU Cooler, FAN, PC case. Use components that are most popular in Kazakhstan's stores in July 2024. Before answering, check the prices today in Kazakhstan.
+    IMPORTANT: please dont send '''json {code} '''
+    Example of the response:
+    {
+      "CPU": "AMD Ryzen 5 3600",
+      "GPU": "Gigabyte GeForce GTX 1660 SUPER OC",
+      "Motherboard": "Asus PRIME B450M-K",
+      "RAM": "Corsair Vengeance LPX 16GB",
+      "PSU": "EVGA 600 W1",
+      "CPU Cooler": "Cooler Master Hyper 212",
+      "FAN": "Noctua NF-P12",
+      "PC case": "NZXT H510"
+    }`;
 
-    try {
-      components = JSON.parse(adjustedResponseText);
-      fetchProductsAndCalculatePrice();
+    const { components, productResponse, totalPrice } = await getValidBuild(budget, systemPrompt, modelId);
 
-      if (currentMissingComponents.length > 0) {
-        missingComponents = missingComponents.concat(currentMissingComponents);
-        saveJsonData(missingComponentsFile, { components: missingComponents });
-      }
-    } catch (error) {
-      console.error('Failed to parse adjusted JSON response from OpenAI:', error);
+    if (Object.keys(productResponse).length !== 8) {
+      throw new Error('There are duplicate components or missing components in the final build');
     }
 
-    // Send only one response at the end
+    // Send response
     res.json({
-      adjustedResponse: adjustedResponseText,
+      adjustedResponse: JSON.stringify(components),
       products: productResponse,
       totalPrice: totalPrice,
-      missingComponents: currentMissingComponents,
       budgetDifference: totalPrice - budget
     });
 

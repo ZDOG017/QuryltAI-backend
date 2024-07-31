@@ -80,7 +80,7 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
   const budgetLowerLimit = budget * 0.9;
   const budgetUpperLimit = budget * 1.1;
   let attempts = 0;
-  const maxAttempts = 5;
+  const maxAttempts = 20;
   let currentMessages = [
     { role: "system", content: systemPrompt },
     { role: "user", content: `The budget for this build is ${budget} KZT.` }
@@ -115,7 +115,13 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
     console.log('Missing components:', currentMissingComponents);
     console.log('Total price:', totalPrice);
 
-    if (totalPrice >= budgetLowerLimit && totalPrice <= budgetUpperLimit && currentMissingComponents.length === 0) {
+    // Check if there are duplicate components or missing components
+    if (Object.keys(productResponse).length !== 8 || currentMissingComponents.length > 0) {
+      console.log('There are duplicate components or missing components in the build');
+      continue; // Try again if there are duplicates or missing components
+    }
+
+    if (totalPrice >= budgetLowerLimit && totalPrice <= budgetUpperLimit) {
       console.log('Valid build found');
       return { components, productResponse, totalPrice };
     }
@@ -130,9 +136,8 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
     const adjustmentPrompt = `The current build has a total price of ${totalPrice} KZT, which is not within 10% of the budget (${budget} KZT).
     Current components and prices: ${componentsWithPrices}.
     ${currentMissingComponents.length > 0 ? `The following components were not found: ${currentMissingComponents.map(comp => comp.key).join(', ')}.` : ''}
-    Please adjust the build to be closer to the budget while maintaining performance. Prefer changing individual components rather than the entire build.
-    If the current total price is below the budget, suggest more expensive components.
-    If the current total price is above the budget, suggest cheaper components.
+    Please adjust the build to be closer to the budget.
+    If the current total price is below the budget, suggest more expensive components incrementally and vice versa.
     STRICTLY: Provide your response in the same JSON format as before. Ensure the total cost does not exceed the budget and remains within 10% of the budget.
     Also, please ensure that all components are real PC components.`;
 
@@ -171,9 +176,12 @@ app.post('/api/generate', async (req, res) => {
 
     const { components, productResponse, totalPrice } = await getValidBuild(budget, systemPrompt, modelId);
 
-    if (Object.keys(productResponse).length !== 8) {
-      throw new Error('There are duplicate components or missing components in the final build');
-    }
+    console.log('Sending response to frontend:', {
+      adjustedResponse: JSON.stringify(components),
+      products: productResponse,
+      totalPrice: totalPrice,
+      budgetDifference: totalPrice - budget
+    });
 
     // Send response
     res.json({

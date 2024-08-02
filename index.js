@@ -37,13 +37,33 @@ const missingComponentsFile = 'missingComponents.json';
 // Initialize missing components
 let missingComponents = loadJsonData(missingComponentsFile).components || [];
 
-const findBestMatch = (searchTerm, products) => {
+function findBestProductMatch(query, products) {
+  // Convert query to lowercase and split into words
+  const queryWords = query.toLowerCase().match(/\b\w+\b/g) || [];
+  
   if (products.length === 0) return null;
-  const productNames = products.map(product => product.title);
-  const { bestMatch } = stringSimilarity.findBestMatch(searchTerm, productNames);
-  const bestMatchIndex = productNames.indexOf(bestMatch.target);
-  return products[bestMatchIndex] || null;
-};
+
+  let bestMatch = null;
+  let highestScore = 0;
+
+  products.forEach(product => {
+    // Convert product title to lowercase and split into words
+    const productWords = product.title.toLowerCase().match(/\b\w+\b/g) || [];
+    
+    // Count matching words
+    const matchingWords = queryWords.filter(word => productWords.includes(word));
+    const score = matchingWords.length;
+
+    // Update best match if this product has a higher score
+    if (score > highestScore) {
+      highestScore = score;
+      bestMatch = product;
+    }
+  });
+
+  return bestMatch;
+}
+
 
 // Function to fetch products and calculate total price
 const fetchProductsAndCalculatePrice = (components, parsedComponents) => {
@@ -54,7 +74,7 @@ const fetchProductsAndCalculatePrice = (components, parsedComponents) => {
 
   for (const key of requiredComponents) {
     const component = components[key];
-    const bestMatchProduct = findBestMatch(component, parsedComponents.components);
+    const bestMatchProduct = findBestProductMatch(component, parsedComponents.components);
     if (bestMatchProduct) {
       fetchedProducts.push({ key, product: bestMatchProduct });
     } else {

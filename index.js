@@ -25,17 +25,8 @@ function loadJsonData(filePath) {
   return { components: [] };
 }
 
-// Function to save JSON data
-function saveJsonData(filePath, data) {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
-
 // Load existing data
 const parsedComponents = loadJsonData('parsedComponents.json');
-const missingComponentsFile = 'missingComponents.json';
-
-// Initialize missing components
-let missingComponents = loadJsonData(missingComponentsFile).components || [];
 
 function findBestProductMatch(query, products) {
   if (products.length === 0) return null;
@@ -60,7 +51,6 @@ function findBestProductMatch(query, products) {
 const fetchProductsAndCalculatePrice = (components, parsedComponents, similarityThreshold = 0.5) => {
   const requiredComponents = ["CPU", "GPU", "Motherboard", "RAM", "PSU", "CPU Cooler", "FAN", "PC case"];
   let fetchedProducts = [];
-  let currentMissingComponents = [];
   let totalPrice = 0;
 
   for (const key of requiredComponents) {
@@ -69,8 +59,6 @@ const fetchProductsAndCalculatePrice = (components, parsedComponents, similarity
 
     if (bestMatchProduct && bestMatchProduct.score >= similarityThreshold) {
       fetchedProducts.push({ key, product: bestMatchProduct.product });
-    } else {
-      currentMissingComponents.push({ key, component });
     }
   }
 
@@ -84,18 +72,18 @@ const fetchProductsAndCalculatePrice = (components, parsedComponents, similarity
   const productResponse = uniqueProducts;
   totalPrice = Object.values(productResponse).reduce((sum, product) => sum + parseInt(product.price, 10), 0);
 
-  return { productResponse, currentMissingComponents, totalPrice };
+  return { productResponse, totalPrice };
 };
 
 const getValidBuild = async (budget, systemPrompt, modelId) => {
-  const budgetLowerLimit = budget - 90000;
-  const budgetUpperLimit = budget + 90000;
+  const budgetLowerLimit = budget - 50000;
+  const budgetUpperLimit = budget + 50000;
   let attempts = 0;
   let usedTokens = 0;
   const maxAttempts = 20;
   let currentMessages = [
     { role: "system", content: systemPrompt },
-    { role: "user", content: `The budget for this build is ${budget} KZT.` }
+    { role: "user", content: `The budget for this build is ${budget} KZT. Please calculate the total price of the components and ensure that they are within the ${budget -50000} KZT - ${budget +50000} KZT price range` }
   ];
 
   while (attempts < maxAttempts) {
@@ -126,14 +114,13 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
       continue; // Try again if JSON is not valid
     }
 
-    const { productResponse, currentMissingComponents, totalPrice } = fetchProductsAndCalculatePrice(components, parsedComponents);
+    const { productResponse, totalPrice } = fetchProductsAndCalculatePrice(components, parsedComponents);
 
     console.log('Fetched products:', productResponse);
-    console.log('Missing components:', currentMissingComponents);
     console.log('Total price:', totalPrice);
-    console.log('Total tokens:', totalTokens)
+    console.log('Total tokens:', totalTokens);
 
-    if (Object.keys(productResponse).length !== 8 || currentMissingComponents.length > 0) {
+    if (Object.keys(productResponse).length !== 8) {
       console.log('There are duplicate components or missing components in the build');
       continue; // Try again if there are duplicates or missing components
     }
@@ -143,20 +130,18 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
       return { components, productResponse, totalPrice };
     }
 
-    console.log(`Build is not valid. Total price ${totalPrice} is not within 10% of the budget (${budgetLowerLimit} - ${budgetUpperLimit}).`);
+    console.log(`Build is not valid. Total price ${totalPrice} is not within 50,000 KZT of the budget (${budgetLowerLimit} - ${budgetUpperLimit}).`);
 
     const componentsWithPrices = Object.entries(productResponse)
       .map(([key, product]) => `${key}: ${product.title} - ${product.price} KZT`)
       .join(', ');
 
-    const adjustmentPrompt = `The current build has a total price of ${totalPrice} KZT, which is not within 10% of the budget (${budget} KZT).
-    Current components and prices: ${componentsWithPrices}.
-    ${currentMissingComponents.length > 0 ? `The following components were not found: ${currentMissingComponents.map(comp => comp.key).join(', ')}.` : ''}
-    Please adjust the build to be closer to the budget.
-    If the current total price is below the budget, suggest more expensive components incrementally and vice versa.
-    STRICTLY: Provide your response in the same JSON format as before. Ensure the total cost does not exceed the budget and remains within 10% of the budget.
-    Also, please ensure that all components are real PC components.`;
-
+      const adjustmentPrompt = `CRITICAL ERROR: The current build's total price of ${totalPrice} KZT is not within the required range of ${budgetLowerLimit} KZT to ${budgetUpperLimit} KZT.
+      Current components and prices: ${componentsWithPrices}.
+      STRICT REQUIREMENT: Adjust the build to fall within the range of ${budgetLowerLimit} KZT to ${budgetUpperLimit} KZT. This is NOT negotiable.
+      MANDATORY: You MUST calculate the total cost of your selected components before responding.
+      CRUCIAL: Provide your response in the same JSON format as before. DO NOT include any explanations or text outside the JSON.
+      REMEMBER: Budget adherence is the ONLY priority. Sacrifice performance if necessary to meet this requirement.`;
     currentMessages = [
       { role: "system", content: systemPrompt },
       { role: "user", content: adjustmentPrompt }
@@ -172,25 +157,24 @@ app.post('/api/generate', async (req, res) => {
     console.log('Budget:', budget);
 
     const modelId = "gpt-4o-mini";
-    const systemPrompt = `You are an assistant helping to build PCs with a focus on budget of the user and the build should be compatible with the components.
-    IMPORTANT: Use the components that are widely available in Kazakhstan. The components should be from kaspi.kz
-    IMPORTANT: Look up the prices that are in Kaspi.kz and in KZT (Tenge).
-    IMPORTANT: Make a build that accurately or closely matches the desired budget of the user and DON'T comment on this. IMPORTANT: take the real-time prices of the components from kaspi.kz. 
-    IMPORTANT: Dont write anything except JSON Format. STRICTLY list only the component names in JSON format, with each component type as a key and the component name as the value. DO NOT WRITE ANYTHING EXCEPT THE JSON. The response must include exactly these components: CPU, GPU, Motherboard, RAM, PSU, CPU Cooler, FAN, PC case. Use components that are most popular in Kazakhstan's stores in July 2024. Before answering, check the prices today in Kazakhstan.
-    IMPORTANT: please dont send '''json {code} '''
-    Here is the listing of all of the components in kaspi.kz
+    const systemPrompt = `You are an assistant building PCs with an EXTREMELY STRICT focus on the user's budget of ${budget} KZT. The build MUST be compatible and MUST adhere to this exact budget.
+    CRITICAL: Only use components from the provided JSON. Select components that PRECISELY match the ${budget} KZT budget.
+    MANDATORY: The total cost of all components MUST be within the range of ${budget - 50000} KZT to ${budget + 50000} KZT. NO EXCEPTIONS.
+    CRUCIAL: Respond ONLY in JSON format. List EXACTLY these components: CPU, GPU, Motherboard, RAM, PSU, CPU Cooler, FAN, PC case.
+    DO NOT include any text outside the JSON. DO NOT use markdown formatting.
+    BUDGET ADHERENCE IS PARAMOUNT. You MUST calculate the total cost of your selected components before responding and ensure it falls within the specified range.
+    Here is the listing of all available components:
     ${JSON.stringify(parsedComponents)}
-
-    Example of the response:
+    Example response format (DO NOT copy these components, select based on the given ${budget} KZT budget):
     {
-      "CPU": "AMD Ryzen 5 3600",
-      "GPU": "Gigabyte GeForce GTX 1660 SUPER OC",
-      "Motherboard": "Asus PRIME B450M-K",
-      "RAM": "Corsair Vengeance LPX 16GB",
-      "PSU": "EVGA 600 W1",
-      "CPU Cooler": "Cooler Master Hyper 212",
-      "FAN": "Noctua NF-P12",
-      "PC case": "NZXT H510"
+    "CPU": "AMD Ryzen 5 3600",
+    "GPU": "Gigabyte GeForce GTX 1660 SUPER OC",
+    "Motherboard": "Asus PRIME B450M-K",
+    "RAM": "Corsair Vengeance LPX 16GB",
+    "PSU": "EVGA 600 W1",
+    "CPU Cooler": "Cooler Master Hyper 212",
+    "FAN": "Noctua NF-P12",
+    "PC case": "NZXT H510"
     }`;
 
     const { components, productResponse, totalPrice } = await getValidBuild(budget, systemPrompt, modelId);

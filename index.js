@@ -38,35 +38,26 @@ const missingComponentsFile = 'missingComponents.json';
 let missingComponents = loadJsonData(missingComponentsFile).components || [];
 
 function findBestProductMatch(query, products) {
-  // Convert query to lowercase and split into words
-  const queryWords = query.toLowerCase().match(/\b\w+\b/g) || [];
-  
   if (products.length === 0) return null;
 
   let bestMatch = null;
   let highestScore = 0;
 
   products.forEach(product => {
-    // Convert product title to lowercase and split into words
-    const productWords = product.title.toLowerCase().match(/\b\w+\b/g) || [];
-    
-    // Count matching words
-    const matchingWords = queryWords.filter(word => productWords.includes(word));
-    const score = matchingWords.length;
+    // Calculate similarity score between query and product title
+    const score = stringSimilarity.compareTwoStrings(query.toLowerCase(), product.title.toLowerCase());
 
     // Update best match if this product has a higher score
     if (score > highestScore) {
       highestScore = score;
-      bestMatch = product;
+      bestMatch = { product, score };
     }
   });
 
   return bestMatch;
 }
 
-
-// Function to fetch products and calculate total price
-const fetchProductsAndCalculatePrice = (components, parsedComponents) => {
+const fetchProductsAndCalculatePrice = (components, parsedComponents, similarityThreshold = 0.5) => {
   const requiredComponents = ["CPU", "GPU", "Motherboard", "RAM", "PSU", "CPU Cooler", "FAN", "PC case"];
   let fetchedProducts = [];
   let currentMissingComponents = [];
@@ -75,14 +66,14 @@ const fetchProductsAndCalculatePrice = (components, parsedComponents) => {
   for (const key of requiredComponents) {
     const component = components[key];
     const bestMatchProduct = findBestProductMatch(component, parsedComponents.components);
-    if (bestMatchProduct) {
-      fetchedProducts.push({ key, product: bestMatchProduct });
+
+    if (bestMatchProduct && bestMatchProduct.score >= similarityThreshold) {
+      fetchedProducts.push({ key, product: bestMatchProduct.product });
     } else {
       currentMissingComponents.push({ key, component });
     }
   }
 
-  // Filter out duplicates, ensure only one of each component type
   const uniqueProducts = {};
   for (const { key, product } of fetchedProducts) {
     if (!uniqueProducts[key]) {
@@ -97,8 +88,8 @@ const fetchProductsAndCalculatePrice = (components, parsedComponents) => {
 };
 
 const getValidBuild = async (budget, systemPrompt, modelId) => {
-  const budgetLowerLimit = budget * 0.9;
-  const budgetUpperLimit = budget * 1.1;
+  const budgetLowerLimit = budget - 90000;
+  const budgetUpperLimit = budget + 90000;
   let attempts = 0;
   const maxAttempts = 20;
   let currentMessages = [
@@ -135,7 +126,6 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
     console.log('Missing components:', currentMissingComponents);
     console.log('Total price:', totalPrice);
 
-    // Check if there are duplicate components or missing components
     if (Object.keys(productResponse).length !== 8 || currentMissingComponents.length > 0) {
       console.log('There are duplicate components or missing components in the build');
       continue; // Try again if there are duplicates or missing components
@@ -148,7 +138,6 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
 
     console.log(`Build is not valid. Total price ${totalPrice} is not within 10% of the budget (${budgetLowerLimit} - ${budgetUpperLimit}).`);
 
-    // If not valid, prepare adjustment prompt with current components and their prices
     const componentsWithPrices = Object.entries(productResponse)
       .map(([key, product]) => `${key}: ${product.title} - ${product.price} KZT`)
       .join(', ');

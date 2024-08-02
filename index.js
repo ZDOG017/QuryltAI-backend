@@ -91,6 +91,7 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
   const budgetLowerLimit = budget - 90000;
   const budgetUpperLimit = budget + 90000;
   let attempts = 0;
+  let usedTokens = 0;
   const maxAttempts = 20;
   let currentMessages = [
     { role: "system", content: systemPrompt },
@@ -107,6 +108,11 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
       model: modelId,
       messages: currentMessages,
     });
+
+    const completionTokens = result.usage.completion_tokens;
+    const promptTokens = result.usage.prompt_tokens;
+    const totalTokens = result.usage.total_tokens;
+    usedTokens += totalTokens;
 
     const responseText = result.choices[0].message.content;
     console.log('Received response from OpenAI: \n', responseText);
@@ -125,6 +131,7 @@ const getValidBuild = async (budget, systemPrompt, modelId) => {
     console.log('Fetched products:', productResponse);
     console.log('Missing components:', currentMissingComponents);
     console.log('Total price:', totalPrice);
+    console.log('Total tokens:', totalTokens)
 
     if (Object.keys(productResponse).length !== 8 || currentMissingComponents.length > 0) {
       console.log('There are duplicate components or missing components in the build');
@@ -171,6 +178,9 @@ app.post('/api/generate', async (req, res) => {
     IMPORTANT: Make a build that accurately or closely matches the desired budget of the user and DON'T comment on this. IMPORTANT: take the real-time prices of the components from kaspi.kz. 
     IMPORTANT: Dont write anything except JSON Format. STRICTLY list only the component names in JSON format, with each component type as a key and the component name as the value. DO NOT WRITE ANYTHING EXCEPT THE JSON. The response must include exactly these components: CPU, GPU, Motherboard, RAM, PSU, CPU Cooler, FAN, PC case. Use components that are most popular in Kazakhstan's stores in July 2024. Before answering, check the prices today in Kazakhstan.
     IMPORTANT: please dont send '''json {code} '''
+    Here is the listing of all of the components in kaspi.kz
+    ${JSON.stringify(parsedComponents)}
+
     Example of the response:
     {
       "CPU": "AMD Ryzen 5 3600",

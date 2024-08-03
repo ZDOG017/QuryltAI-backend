@@ -76,14 +76,14 @@ const fetchProductsAndCalculatePrice = (components, parsedComponents, similarity
 };
 
 const getValidBuild = async (budget, systemPrompt, modelId) => {
-  const budgetLowerLimit = budget - 50000;
-  const budgetUpperLimit = budget + 50000;
+  const budgetLowerLimit = budget - 90000;
+  const budgetUpperLimit = budget + 90000;
   let attempts = 0;
   let usedTokens = 0;
   const maxAttempts = 20;
   let currentMessages = [
     { role: "system", content: systemPrompt },
-    { role: "user", content: `The budget for this build is ${budget} KZT. Please calculate the total price of the components and ensure that they are within the ${budget -50000} KZT - ${budget +50000} KZT price range` }
+    { role: "user", content: `The budget for this build is ${budget} KZT. Please calculate the total price of the components and ensure that they are within the ${budget -90000} KZT - ${budget +90000} KZT price range` }
   ];
 
   while (attempts < maxAttempts) {
@@ -159,7 +159,7 @@ app.post('/api/generate', async (req, res) => {
     const modelId = "gpt-4o-mini";
     const systemPrompt = `You are an assistant building PCs with an EXTREMELY STRICT focus on the user's budget of ${budget} KZT. The build MUST be compatible and MUST adhere to this exact budget.
     CRITICAL: Only use components from the provided JSON. Select components that PRECISELY match the ${budget} KZT budget.
-    MANDATORY: The total cost of all components MUST be within the range of ${budget - 50000} KZT to ${budget + 50000} KZT. NO EXCEPTIONS.
+    MANDATORY: The total cost of all components MUST be within the range of ${budget - 90000} KZT to ${budget + 90000} KZT. NO EXCEPTIONS.
     CRUCIAL: Respond ONLY in JSON format. List EXACTLY these components: CPU, GPU, Motherboard, RAM, PSU, CPU Cooler, FAN, PC case.
     DO NOT include any text outside the JSON. DO NOT use markdown formatting.
     BUDGET ADHERENCE IS PARAMOUNT. You MUST calculate the total cost of your selected components before responding and ensure it falls within the specified range.

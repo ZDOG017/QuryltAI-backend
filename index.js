@@ -200,6 +200,61 @@ app.post('/api/generate', async (req, res) => {
   }
 });
 
+app.post('/api/checkFPS', async (req, res) => {
+  try {
+    const { games, components } = req.body;
+    console.log('Received games:', games);
+    console.log('Received components:', components);
+
+    const systemPrompt = `You are an expert in PC hardware and gaming performance. Given a list of PC components and games, estimate the FPS (Frames Per Second) Range for each game. Provide realistic estimates based on the hardware configuration.
+
+Components:
+${components.join(', ')}
+
+Games:
+${games.join(', ')}
+IMPORTANT: FPS should be a range, not just a single number. For example: 90 is incorrect, while 90-120 is acceptable.
+Respond with a JSON object where keys are game names and values are estimated FPS.
+For example:
+{
+  "Cyberpunk 2077": 65-90,
+  "Fortnite": 120-150,
+  "Red Dead Redemption 2": 55-80
+}
+
+CRUCIAL: Provide your response in the same JSON format as before. DO NOT include any explanations or text outside the JSON.
+     `;
+
+    const result = await openai.chat.completions.create({
+      model: "gpt-4-1106-preview", // Use an appropriate model
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: "Estimate FPS for the given games and components." }
+      ],
+      response_format: { type: "json_object" }
+    });
+
+    const responseText = result.choices[0].message.content;
+    console.log('Received response from OpenAI:', responseText);
+
+    let fpsEstimates;
+    try {
+      fpsEstimates = JSON.parse(responseText);
+    } catch (error) {
+      console.error('Failed to parse JSON response from OpenAI:', error);
+      res.status(500).json({ message: "Failed to parse FPS estimates" });
+      return;
+    }
+
+    console.log('Sending FPS estimates to frontend:', fpsEstimates);
+    res.json(fpsEstimates);
+
+  } catch (err) {
+    console.error('Error in checkFPS:', err);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
